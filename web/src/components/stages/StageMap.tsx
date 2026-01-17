@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import StageCard from './StageCard';
 import AddStageModal from './AddStageModal';
-import { InterviewStage, StageProgress, DEFAULT_STAGES } from '../../types';
+import { InterviewStage, StageProgress } from '../../types';
+import { STAGES as DEFAULT_STAGES } from '../../data/stages';
 
 const STORAGE_KEY = 'togtog_stage_progress';
 const STAGE_ORDER_KEY = 'togtog_stage_order';
@@ -76,19 +77,14 @@ export default function StageMap() {
     for (const id of progress.stageOrder) {
       const stage = defaultStagesMap.get(id) || customStagesMap.get(id);
       if (stage) {
-        // Add checklist if missing
-        const fullStage: InterviewStage = {
-          ...stage,
-          checklist: stage.checklist || [],
-        };
-        orderedStages.push(fullStage);
+        orderedStages.push(stage);
       }
     }
 
     // Add any stages not in order (shouldn't happen but safety)
     for (const stage of DEFAULT_STAGES) {
       if (!progress.stageOrder.includes(stage.id)) {
-        orderedStages.push({ ...stage, checklist: stage.checklist || [] });
+        orderedStages.push(stage);
       }
     }
 
