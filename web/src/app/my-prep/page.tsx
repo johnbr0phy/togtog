@@ -33,26 +33,32 @@ export default function MyPrepPage() {
 
         {/* Quick Links */}
         <div className="mt-12 grid gap-4 md:grid-cols-3">
-          <div className="bg-white rounded-lg border border-gray-200 p-5">
-            <h3 className="font-semibold text-gray-900 mb-2">Coming Soon</h3>
-            <p className="text-sm text-gray-600 mb-3">
-              Set Piece Builder - Create reusable stories for behavioral questions
+          <Link href="/set-pieces" className="bg-white rounded-lg border border-gray-200 p-5 hover:border-blue-300 hover:shadow-sm transition-all group">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl">📝</span>
+              <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">Set Pieces</h3>
+            </div>
+            <p className="text-sm text-gray-600">
+              Create reusable STAR stories for 7 behavioral question categories.
             </p>
-            <span className="text-xs text-gray-400">Chunk 24</span>
+          </Link>
+          <div className="bg-white rounded-lg border border-gray-200 p-5 opacity-60">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl">🎯</span>
+              <h3 className="font-semibold text-gray-900">Practice Sessions</h3>
+            </div>
+            <p className="text-sm text-gray-600">
+              Drill questions by stage or category. Coming soon.
+            </p>
           </div>
-          <div className="bg-white rounded-lg border border-gray-200 p-5">
-            <h3 className="font-semibold text-gray-900 mb-2">Coming Soon</h3>
-            <p className="text-sm text-gray-600 mb-3">
-              Practice Sessions - Drill questions by stage or category
+          <div className="bg-white rounded-lg border border-gray-200 p-5 opacity-60">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl">📊</span>
+              <h3 className="font-semibold text-gray-900">Weak Points</h3>
+            </div>
+            <p className="text-sm text-gray-600">
+              See where you need more practice. Coming soon.
             </p>
-            <span className="text-xs text-gray-400">Chunk 26</span>
-          </div>
-          <div className="bg-white rounded-lg border border-gray-200 p-5">
-            <h3 className="font-semibold text-gray-900 mb-2">Coming Soon</h3>
-            <p className="text-sm text-gray-600 mb-3">
-              Weak Points Dashboard - See where you need more practice
-            </p>
-            <span className="text-xs text-gray-400">Chunk 28</span>
           </div>
         </div>
       </main>
