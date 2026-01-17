@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-10 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-11 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -20,7 +20,7 @@
 | 8 | Tech Stack Decision | **Complete** |
 | 9 | Landing Page Template (P1) | **Complete** |
 | 10 | Deploy Test Positions (P1) | **Complete** |
-| 11 | Free Tier Experience (P2) | Not Started |
+| 11 | Free Tier Experience (P2) | **Complete** |
 | 12 | Payment Integration (P3) | Not Started |
 | 13 | Premium Content Delivery (P4) | Not Started |
 | 14 | Google Ads Campaign Structure (M1) | Not Started |
@@ -249,18 +249,34 @@
 
 ## Chunk 11: Free Tier Experience (P2)
 
-- [ ] Display 5-10 free questions without login
-- [ ] Show question text, category badge, difficulty
-- [ ] Implement answer blur/fade behind paywall
-- [ ] Add "Unlock full answer" CTA
-- [ ] Implement engagement tracking
-- [ ] Optional email capture with value prop
+- [x] Display 5-10 free questions without login
+- [x] Show question text, category badge, difficulty
+- [x] Implement answer blur/fade behind paywall
+- [x] Add "Unlock full answer" CTA
+- [x] Implement engagement tracking (basic - expand/collapse)
+- [x] Optional email capture with value prop (CTA for free PDF)
 
 **Deliverable:** Free tier functional with analytics
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 10
+
+**Summary:**
+- Created Question type definitions and sample questions data (10 questions from question bank)
+- Built QuestionCard component with:
+  - Question type badges (Behavioral, Technical, Case Study, Situational, Culture Fit)
+  - Difficulty badges (Beginner, Intermediate, Advanced)
+  - Estimated time display
+  - Expandable answer section
+  - Blur effect for premium answers with unlock CTA overlay
+- Built QuestionsSection component with:
+  - Filter tabs by question type
+  - Show more/less functionality
+  - Unlock CTA banner with email capture option
+  - Question stats display
+- Integrated into landing pages (Google, Amazon, McKinsey)
+- Build verified successful
 
 ---
 
@@ -387,4 +403,5 @@
 | 2026-01-17 | 5 | Added 20 questions (10 behavioral, 10 technical) - now 35 total |
 | 2026-01-17 | 6 | Added 25 questions (5 case, 5 situational, 5 culture, 10 company-specific) - now 60 total |
 | 2026-01-17 | 7 | Domain strategy - path-based recommended, SSL/redirect requirements defined |
+| 2026-01-17 | 11 | Free tier experience - questions displayed with blur effect, unlock CTAs |
 

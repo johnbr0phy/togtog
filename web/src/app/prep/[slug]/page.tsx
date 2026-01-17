@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getPositionBySlug, getAllSlugs } from '@/data/positions';
+import { getQuestionsForPosition } from '@/data/questions';
 import { HeroSection } from '@/components/HeroSection';
 import { ModulesSection } from '@/components/ModulesSection';
 import { SocialProofSection } from '@/components/SocialProofSection';
+import { QuestionsSection } from '@/components';
 import { PricingSection } from '@/components/PricingSection';
 import { FAQSection } from '@/components/FAQSection';
 
@@ -42,10 +44,13 @@ export default async function PrepPage({ params }: PageProps) {
     notFound();
   }
 
+  const questions = getQuestionsForPosition(slug);
+
   return (
     <main className="min-h-screen">
       <HeroSection position={position} />
       <ModulesSection position={position} />
+      <QuestionsSection questions={questions} companyName={position.company} />
       <SocialProofSection company={position.company} />
       <PricingSection position={position} />
       <FAQSection position={position} />
