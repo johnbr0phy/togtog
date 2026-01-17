@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-5, 8-10 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-6, 8-10 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -15,7 +15,7 @@
 | 3 | AI Marketing Copy - Prompt Template (C3) | **Complete** |
 | 4 | AI Marketing Copy - Sample Outputs (C3) | **Complete** |
 | 5 | Question Bank Expansion - Part 1 (C4) | **Complete** |
-| 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
+| 6 | Question Bank Expansion - Part 2 (C4) | **Complete** |
 | 7 | Domain Strategy (M2) | Not Started |
 | 8 | Tech Stack Decision | **Complete** |
 | 9 | Landing Page Template (P1) | **Complete** |
@@ -137,17 +137,27 @@
 
 ## Chunk 6: Question Bank Expansion - Part 2 (C4)
 
-- [ ] Add 5 case study questions
-- [ ] Add 5 situational questions
-- [ ] Add 5 culture fit questions
-- [ ] Add 10 company-specific questions (top 3 target companies)
-- [ ] Ensure 50+ total questions reached
+- [x] Add 5 case study questions
+- [x] Add 5 situational questions
+- [x] Add 5 culture fit questions
+- [x] Add 10 company-specific questions (top 3 target companies)
+- [x] Ensure 50+ total questions reached (60 total)
 
 **Deliverable:** Complete question bank with 50+ entries
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 5
+
+**Summary:**
+- 5 case study questions (retail, airlines, streaming, pharma, system design)
+- 5 situational questions (incident response, disagreement, credit-taking, missed deadline, process change)
+- 5 culture fit questions (work environment, stress, motivation, team values, 5-year goals)
+- 10 company-specific questions:
+  - Google (3): data-driven decisions, decisions under uncertainty, pride in building
+  - Amazon (4): Invent & Simplify, Ownership, Have Backbone, Deliver Results
+  - McKinsey (3): Leadership, Personal Impact, Entrepreneurial Drive (PEI format)
+- **Total questions: 60** (exceeds 50+ target)
 
 ---
 
@@ -367,4 +377,5 @@
 | 2026-01-17 | 3 | Marketing copy prompt template + style guide + A/B variants |
 | 2026-01-17 | 4 | Generated 10 validated sample outputs for landing pages |
 | 2026-01-17 | 5 | Added 20 questions (10 behavioral, 10 technical) - now 35 total |
+| 2026-01-17 | 6 | Added 25 questions (5 case, 5 situational, 5 culture, 10 company-specific) - now 60 total |
 
