@@ -375,3 +375,1441 @@ question_bank:
       tags:
         - "interview:behavioral"
         - "format:practice"
+
+    # =========================================================================
+    # Additional Behavioral Questions (Chunk 5 Expansion)
+    # =========================================================================
+
+    - id: "qb-univ-beh-016"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you had to make a decision with incomplete information."
+      context: "This question assesses decision-making under uncertainty and risk tolerance."
+      behavioral:
+        competency: "problem-solving"
+        star_prompts:
+          situation: "What was the decision you needed to make? What information was missing?"
+          task: "What was at stake? What were the constraints (time, resources)?"
+          action: "How did you gather what information you could? How did you weigh risks and make the call?"
+          result: "What was the outcome? Would you make the same decision again?"
+        sample_answer: |
+          Situation: We had a production incident affecting 10% of users, and I was the on-call engineer. Logs suggested either a database issue or a third-party API failure, but I couldn't definitively determine which without more investigation that would take 30+ minutes.
+
+          Task: I needed to restore service quickly. Every minute of downtime was costing us roughly $5,000 in lost transactions. I had to decide whether to roll back our recent deployment, switch to backup database, or fail over to our secondary API provider.
+
+          Action: I quickly assessed the probability of each cause based on available data. The deployment was 3 days old with no previous issues, making it unlikely. The third-party API had been flaky recently. I decided to fail over to the secondary API provider—it was the fastest to implement and had the highest probability of being the root cause. I documented my reasoning in our incident channel so the team knew my thinking.
+
+          Result: The failover resolved the issue within 5 minutes. Post-incident analysis confirmed the third-party API was the cause. My manager appreciated that I documented my reasoning, which helped us improve our runbook for similar situations.
+        evaluation_criteria:
+          - "Clear articulation of uncertainty"
+          - "Logical framework for decision-making"
+          - "Appropriate risk assessment"
+          - "Ownership of the decision regardless of outcome"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "skill:leadership"
+
+    - id: "qb-univ-beh-017"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Describe a time you went above and beyond what was expected."
+      context: "This question assesses initiative, ownership, and work ethic."
+      behavioral:
+        competency: "leadership"
+        star_prompts:
+          situation: "What was the context? What was the baseline expectation?"
+          task: "What did you see that others might have missed? Why did you decide to do more?"
+          action: "What specifically did you do beyond the requirements?"
+          result: "What was the impact? How was your extra effort recognized or valued?"
+        sample_answer: |
+          Situation: I was assigned to fix a bug in our checkout flow that was causing about 2% of transactions to fail. The ticket estimated 4 hours of work.
+
+          Task: My official task was just to fix the specific bug, but when I started investigating, I noticed the checkout code had several other potential issues that could cause similar problems in the future.
+
+          Action: After fixing the assigned bug in about 3 hours, I spent an additional day refactoring the checkout error handling. I added comprehensive logging, created a dashboard to monitor checkout failures in real-time, and documented the common failure modes I'd discovered. I then wrote up a brief proposal for the team on how we could prevent similar issues going forward.
+
+          Result: The immediate bug fix worked, but the monitoring dashboard caught two other issues in the following week before they became customer-facing problems. My proposal was adopted as a standard practice for critical user flows, and I was asked to present the approach to our sister team.
+        evaluation_criteria:
+          - "Clear distinction between expected and actual effort"
+          - "Strategic thinking about broader impact"
+          - "Self-motivation (not just responding to requests)"
+          - "Measurable positive outcome beyond the original ask"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "amazon:ownership"
+
+    - id: "qb-univ-beh-018"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you received critical feedback. How did you respond?"
+      context: "This question assesses coachability, self-awareness, and growth mindset."
+      behavioral:
+        competency: "adaptability"
+        star_prompts:
+          situation: "What was the feedback? Who gave it and in what context?"
+          task: "What was your initial reaction? What did you need to do with the feedback?"
+          action: "How did you process the feedback? What changes did you make?"
+          result: "What was the outcome? How did your behavior or performance change?"
+        sample_answer: |
+          Situation: During a performance review, my manager told me that while my technical work was strong, I had a reputation for being dismissive of others' ideas in code reviews. This was hard to hear because I thought I was just being thorough.
+
+          Task: I needed to understand if this perception was accurate and, if so, change my behavior without compromising code quality standards.
+
+          Action: First, I asked my manager for specific examples to understand the pattern. I realized I often rejected ideas without fully explaining my reasoning. I started a personal practice: before rejecting an approach in a review, I'd write out the pros and cons and ensure I acknowledged what I liked about the approach before explaining concerns. I also asked a trusted colleague to give me feedback on my reviews for a month.
+
+          Result: After three months, my manager mentioned that multiple people had commented on my improved collaboration. My code review approval rate stayed the same, but feedback from teammates was much more positive. I learned that being right technically isn't enough—how you communicate matters as much as what you communicate.
+        evaluation_criteria:
+          - "Genuine critical feedback (not minor)"
+          - "Mature initial response (not defensive)"
+          - "Concrete actions taken to address feedback"
+          - "Evidence of actual behavior change"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:adaptability"
+        - "skill:communication"
+
+    - id: "qb-univ-beh-019"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you had to work with a difficult stakeholder or customer."
+      context: "This question assesses stakeholder management and communication skills."
+      behavioral:
+        competency: "collaboration"
+        star_prompts:
+          situation: "Who was the difficult stakeholder? What made them difficult to work with?"
+          task: "What was your goal? What did you need from them?"
+          action: "How did you adapt your approach? What strategies did you use?"
+          result: "What was the outcome of the relationship? What did you learn?"
+        sample_answer: |
+          Situation: I was building an internal tool for our sales team. The sales director was my main stakeholder, and he had a reputation for being demanding and changing requirements constantly. In our first meeting, he listed 20 "must-have" features for the MVP.
+
+          Task: I needed to deliver a useful tool within our 6-week timeline while keeping him engaged and not over-promising.
+
+          Action: Instead of pushing back on his feature list, I asked him to walk me through a typical day. I discovered that 3 of his 20 features would address 80% of his team's pain points. I created a prioritized roadmap showing those 3 features in the MVP, with others phased over time. I set up weekly 15-minute demos so he could see progress and give input before I went too far in any direction. When he requested changes, I'd show him the trade-off: "We can add this, but it means pushing feature X to phase 2."
+
+          Result: We launched the MVP on time with his top 3 features. He became one of my biggest advocates, telling other teams about the tool. He later told me he appreciated that I actually listened to his underlying needs rather than just taking orders or pushing back on everything.
+        evaluation_criteria:
+          - "Genuine difficulty (not just busy person)"
+          - "Empathy and effort to understand their perspective"
+          - "Strategic approach to managing the relationship"
+          - "Positive outcome with maintained relationship"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:collaboration"
+        - "skill:communication"
+
+    - id: "qb-univ-beh-020"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Describe a time when you had to learn something new quickly to complete a project."
+      context: "This question assesses learning agility and adaptability."
+      behavioral:
+        competency: "adaptability"
+        star_prompts:
+          situation: "What did you need to learn? Why was it urgent?"
+          task: "What was the project goal? What were the time constraints?"
+          action: "How did you approach learning? What resources did you use?"
+          result: "How quickly did you become productive? What was the project outcome?"
+        sample_answer: |
+          Situation: Our team urgently needed to migrate a critical service to Kubernetes, but no one on the team had K8s experience. We had 4 weeks before our current infrastructure contract expired.
+
+          Task: As the most senior engineer, I volunteered to lead the migration. I needed to learn Kubernetes well enough to architect the migration and guide the team through implementation.
+
+          Action: I blocked out the first week almost entirely for learning. I completed a hands-on tutorial, read the official documentation for our specific use cases, and set up a local K8s cluster to experiment. I also scheduled calls with two engineers at other companies who had done similar migrations. By week 2, I had created a migration plan and set up pairing sessions to teach the team as we worked. I focused on teaching the concepts we needed immediately rather than comprehensive K8s knowledge.
+
+          Result: We completed the migration in 3.5 weeks. I went from zero K8s knowledge to being the team's go-to expert. The migration reduced our infrastructure costs by 30% and improved deployment frequency. I later wrote an internal guide that helped two other teams with their migrations.
+        evaluation_criteria:
+          - "Significant new skill (not incremental)"
+          - "Structured learning approach"
+          - "Ability to become productive quickly"
+          - "Evidence of applying learning effectively"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:adaptability"
+        - "skill:problem-solving"
+
+    - id: "qb-univ-beh-021"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you had to prioritize multiple competing demands."
+      context: "This question assesses prioritization, time management, and judgment."
+      behavioral:
+        competency: "problem-solving"
+        star_prompts:
+          situation: "What were the competing demands? Why couldn't you do everything?"
+          task: "How did you decide what to prioritize? Who else was involved in the decision?"
+          action: "What framework or criteria did you use? How did you communicate your decisions?"
+          result: "What was the outcome? Did you make the right trade-offs?"
+        sample_answer: |
+          Situation: Near the end of Q3, I had three major competing priorities: a feature launch committed to a key customer, technical debt that was slowing down the whole team, and preparing a presentation for our engineering all-hands. All had the same deadline.
+
+          Task: I couldn't do all three well, so I needed to make trade-offs and get alignment from stakeholders on my prioritization.
+
+          Action: I assessed each task on impact and urgency. The customer feature was highest impact—it was tied to a contract renewal. The technical debt was important but could be partially addressed with a smaller scope. The presentation was lower impact. I talked to my manager about deprioritizing the presentation, offering to give it next quarter instead. For the technical debt, I identified the 20% of changes that would give us 80% of the benefit and scoped down to just those. I blocked my calendar to focus on the customer feature.
+
+          Result: The customer feature launched on time and the contract was renewed. The focused technical debt work still improved build times by 25%. My manager appreciated that I proactively communicated trade-offs rather than just missing deadlines. I gave the presentation the following quarter.
+        evaluation_criteria:
+          - "Genuine competing priorities (not manufactured)"
+          - "Clear prioritization framework"
+          - "Proactive communication with stakeholders"
+          - "Appropriate trade-offs with positive outcome"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "skill:communication"
+
+    - id: "qb-univ-beh-022"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Describe a time when you identified a problem that others hadn't noticed."
+      context: "This question assesses proactivity, analytical thinking, and ownership."
+      behavioral:
+        competency: "problem-solving"
+        star_prompts:
+          situation: "What was the problem? Why hadn't others noticed it?"
+          task: "What made you investigate? What was at risk if it wasn't addressed?"
+          action: "How did you validate the problem? How did you bring it to others' attention?"
+          result: "What happened once the problem was addressed?"
+        sample_answer: |
+          Situation: I noticed our API response times had gradually increased by 200ms over three months. It wasn't triggering any alerts because the increase was slow and we were still within SLA. No one else had flagged it.
+
+          Task: I wanted to understand if this was a trend that would eventually become a problem, or just normal variance.
+
+          Action: I pulled historical performance data and found a clear correlation with our growing user base. At the current rate, we'd breach our SLA in about 8 weeks. I dug deeper and found that a caching layer was being gradually filled with stale data, causing more database calls. I put together a brief analysis with projections and presented it at our team standup.
+
+          Result: We fixed the caching issue in a day, which immediately recovered the 200ms. More importantly, I added monitoring to detect similar gradual degradation patterns. My manager noted this as an example of ownership in my next review, and the pattern detection I added caught two similar issues over the following year.
+        evaluation_criteria:
+          - "Non-obvious problem (required investigation)"
+          - "Proactive investigation without being asked"
+          - "Data-driven validation of the problem"
+          - "Effective communication to drive action"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "skill:leadership"
+        - "amazon:ownership"
+
+    - id: "qb-univ-beh-023"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you mentored someone or helped a teammate grow."
+      context: "This question assesses leadership, coaching ability, and investment in others."
+      behavioral:
+        competency: "leadership"
+        star_prompts:
+          situation: "Who did you mentor? What was their situation?"
+          task: "What specific growth did you aim to help with? Why did you take this on?"
+          action: "What was your approach to mentoring? What specific things did you do?"
+          result: "How did the person grow? What was the impact?"
+        sample_answer: |
+          Situation: A new junior engineer joined our team and was struggling with code reviews. His PRs were getting extensive feedback and he seemed discouraged. His manager mentioned she was worried about his ramp-up.
+
+          Task: I offered to help mentor him on writing more reviewable code. This wasn't officially my job, but I remembered struggling similarly early in my career and wanted to help.
+
+          Action: I set up weekly 30-minute sessions. Instead of just telling him what to do, I walked through my own PRs and explained my reasoning for code organization, commit structure, and anticipating reviewer questions. I also reviewed his PRs before he submitted them, giving him feedback privately first. When his PRs did get feedback, we'd debrief on what he could learn from it. After a month, I gradually reduced my pre-reviews.
+
+          Result: Within two months, his PRs were getting approved with minimal feedback. He later told me those sessions were the most valuable part of his onboarding. He's now mentoring the newest team member using a similar approach. His manager thanked me and said it saved her from having a difficult performance conversation.
+        evaluation_criteria:
+          - "Genuine investment of time and effort"
+          - "Structured approach to development"
+          - "Focus on enabling independence, not dependence"
+          - "Measurable growth in the mentee"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "skill:communication"
+
+    - id: "qb-univ-beh-024"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you had to push back on a request from leadership."
+      context: "This question assesses judgment, communication, and professional courage."
+      behavioral:
+        competency: "leadership"
+        star_prompts:
+          situation: "What was the request? Why did you think it was problematic?"
+          task: "What was your goal in pushing back? What were the risks of doing so?"
+          action: "How did you approach the conversation? What did you say?"
+          result: "What was the outcome? How did leadership respond?"
+        sample_answer: |
+          Situation: Our VP asked us to cut testing time in half to meet an aggressive launch deadline. He wanted to ship in 2 weeks instead of 4. The feature involved payments processing, which I felt was too risky to rush.
+
+          Task: I needed to push back on a VP's direct request while being respectful and offering alternatives. I knew the deadline had executive visibility.
+
+          Action: I asked for a brief meeting rather than discussing in Slack. I came prepared with data: our historical defect rate for rushed releases was 3x higher, and for payment features specifically, bugs cost an average of $50K to fix post-launch. I didn't just say "no"—I proposed a middle ground: we could launch a limited beta to 5% of users in 2 weeks, gather data, then expand. This would meet the executive's desire to show progress while managing risk.
+
+          Result: The VP appreciated that I came with data and alternatives rather than just objections. He approved the phased approach and actually mentioned our conversation positively to the CEO as an example of good risk management. The beta caught two issues that would have been costly at full launch.
+        evaluation_criteria:
+          - "Legitimate concern (not just personal preference)"
+          - "Data-driven reasoning"
+          - "Constructive alternative offered"
+          - "Professional and respectful approach"
+      difficulty: "advanced"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "skill:communication"
+        - "amazon:have-backbone"
+
+    - id: "qb-univ-beh-025"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Describe a situation where you had to adapt to a major change at work."
+      context: "This question assesses resilience, flexibility, and change management."
+      behavioral:
+        competency: "adaptability"
+        star_prompts:
+          situation: "What was the change? Why was it significant or challenging?"
+          task: "What did you need to do to adapt? What was your role?"
+          action: "How did you approach the change? What helped you adapt?"
+          result: "How did you come out of the change? What did you learn?"
+        sample_answer: |
+          Situation: Six months into my role, our company was acquired. My entire team was dissolved, and I was moved to a new team working on a product I'd never touched, using a language I didn't know well.
+
+          Task: I needed to become productive on the new team quickly while dealing with the uncertainty of whether my role was secure long-term.
+
+          Action: Rather than dwelling on the disruption, I focused on what I could control. I set up 1:1s with each new teammate to understand the product and codebase. I volunteered for a small project to learn the new language hands-on. I also stayed connected with former teammates for mutual support. When I felt frustrated, I reminded myself that demonstrating adaptability during the transition was probably my best job security.
+
+          Result: Within 3 months, I was contributing meaningfully. Within 6 months, I was leading a workstream. The acquisition ended up being positive—I gained new skills and the combined company had more growth opportunities. My manager specifically praised how I handled the transition when others were still complaining about the old ways.
+        evaluation_criteria:
+          - "Significant change (not minor adjustment)"
+          - "Proactive approach rather than passive acceptance"
+          - "Focus on controllables"
+          - "Positive outcome and learning"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "medium"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:adaptability"
+
+    # =========================================================================
+    # Technical Questions (Chunk 5 Expansion)
+    # =========================================================================
+
+    - id: "qb-tech-001"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is the time complexity of searching for an element in a hash table?"
+      category: "data-structures"
+      options:
+        - "O(1) average, O(n) worst case"
+        - "O(log n)"
+        - "O(n)"
+        - "O(n log n)"
+      correct_answer: 0
+      explanation: "Hash tables provide O(1) average-case lookup by computing an index from the key's hash. Worst case is O(n) if all keys hash to the same bucket (collision), but this is rare with good hash functions."
+      difficulty: "beginner"
+      follow_up: "What causes worst-case O(n) behavior? How can you mitigate it?"
+      tags:
+        - "interview:technical"
+        - "skill:data-structures"
+        - "topic:hash-tables"
+      companies:
+        - "all"
+
+    - id: "qb-tech-002"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "When would you use a stack data structure?"
+      category: "data-structures"
+      options:
+        - "When you need first-in, first-out (FIFO) ordering"
+        - "When you need last-in, first-out (LIFO) ordering"
+        - "When you need to find elements by key quickly"
+        - "When you need to maintain sorted order"
+      correct_answer: 1
+      explanation: "Stacks follow LIFO (last-in, first-out) ordering. Common uses include function call tracking, undo operations, expression parsing, and backtracking algorithms. Queues are for FIFO ordering."
+      difficulty: "beginner"
+      follow_up: "Give an example of when you'd use a stack vs. a queue in a real application."
+      tags:
+        - "interview:technical"
+        - "skill:data-structures"
+        - "topic:stacks"
+      companies:
+        - "all"
+
+    - id: "qb-tech-003"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is the difference between a process and a thread?"
+      category: "systems"
+      options:
+        - "Processes are faster than threads"
+        - "Threads share memory space within a process; processes have separate memory spaces"
+        - "Threads can only exist on multi-core systems"
+        - "Processes are a type of thread"
+      correct_answer: 1
+      explanation: "A process has its own memory space, while threads within a process share the same memory. This makes thread communication easier but requires synchronization. Processes are more isolated but have higher overhead for communication."
+      difficulty: "intermediate"
+      follow_up: "When would you choose multi-threading vs. multi-processing?"
+      tags:
+        - "interview:technical"
+        - "skill:systems"
+        - "topic:concurrency"
+      companies:
+        - "all"
+
+    - id: "qb-tech-004"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is the primary benefit of using an index in a database?"
+      category: "databases"
+      options:
+        - "Reduces storage space"
+        - "Speeds up write operations"
+        - "Speeds up read queries on indexed columns"
+        - "Ensures data integrity"
+      correct_answer: 2
+      explanation: "Indexes create a data structure (typically B-tree) that allows the database to find rows faster without scanning the entire table. However, indexes add overhead to writes and consume additional storage."
+      difficulty: "beginner"
+      follow_up: "What are the trade-offs of adding an index? When might you not want an index?"
+      tags:
+        - "interview:technical"
+        - "skill:databases"
+        - "topic:indexing"
+      companies:
+        - "all"
+
+    - id: "qb-tech-005"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is a RESTful API?"
+      category: "web"
+      options:
+        - "An API that uses only GET requests"
+        - "An architectural style using stateless HTTP operations on resources"
+        - "An API that returns only JSON"
+        - "An API that requires authentication"
+      correct_answer: 1
+      explanation: "REST (Representational State Transfer) is an architectural style where APIs are stateless and operate on resources using standard HTTP methods (GET, POST, PUT, DELETE). Resources are identified by URLs, and operations don't rely on server-stored session state."
+      difficulty: "beginner"
+      follow_up: "What does stateless mean in REST? How do you handle authentication in a stateless API?"
+      tags:
+        - "interview:technical"
+        - "skill:web"
+        - "topic:api-design"
+      companies:
+        - "all"
+
+    - id: "qb-tech-006"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is the purpose of a load balancer?"
+      category: "systems"
+      options:
+        - "To encrypt traffic between servers"
+        - "To distribute incoming traffic across multiple servers"
+        - "To cache frequently accessed data"
+        - "To monitor server health only"
+      correct_answer: 1
+      explanation: "A load balancer distributes incoming network traffic across multiple servers to ensure no single server is overwhelmed. This improves availability, reliability, and performance. Common algorithms include round-robin, least connections, and IP hash."
+      difficulty: "beginner"
+      follow_up: "What load balancing algorithms do you know? When would you use each?"
+      tags:
+        - "interview:technical"
+        - "skill:systems"
+        - "topic:distributed-systems"
+      companies:
+        - "all"
+
+    - id: "qb-tech-007"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is the difference between SQL and NoSQL databases?"
+      category: "databases"
+      options:
+        - "SQL databases are faster than NoSQL"
+        - "NoSQL databases can't handle relationships between data"
+        - "SQL databases use rigid schemas; NoSQL databases offer flexible schemas"
+        - "SQL databases can only be used for small datasets"
+      correct_answer: 2
+      explanation: "SQL databases use structured schemas with tables and relationships, enforcing data integrity. NoSQL databases (document, key-value, graph, etc.) offer flexible schemas, making them suitable for rapidly changing data models or unstructured data. Each has trade-offs depending on use case."
+      difficulty: "beginner"
+      follow_up: "Give an example of when you'd choose SQL vs. NoSQL for a specific application."
+      tags:
+        - "interview:technical"
+        - "skill:databases"
+        - "topic:database-types"
+      companies:
+        - "all"
+
+    - id: "qb-tech-008"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is Big O notation used for?"
+      category: "algorithms"
+      options:
+        - "Measuring exact execution time of code"
+        - "Describing how an algorithm's resource usage scales with input size"
+        - "Counting the number of lines of code"
+        - "Determining memory addresses"
+      correct_answer: 1
+      explanation: "Big O notation describes the upper bound of an algorithm's time or space complexity as input size grows. It abstracts away constants and lower-order terms to focus on scalability. O(n) means linear growth, O(n²) means quadratic, O(log n) means logarithmic."
+      difficulty: "beginner"
+      follow_up: "What's the difference between O(n) and O(n²) in practical terms for a million items?"
+      tags:
+        - "interview:technical"
+        - "skill:algorithms"
+        - "topic:complexity"
+      companies:
+        - "all"
+
+    - id: "qb-tech-009"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is a deadlock in concurrent programming?"
+      category: "systems"
+      options:
+        - "When a program runs too slowly"
+        - "When two or more threads wait indefinitely for resources held by each other"
+        - "When memory is not freed properly"
+        - "When a thread crashes unexpectedly"
+      correct_answer: 1
+      explanation: "A deadlock occurs when two or more threads are blocked forever, each waiting for a resource held by another. Classic example: Thread A holds Lock 1 and waits for Lock 2, while Thread B holds Lock 2 and waits for Lock 1. Prevention strategies include lock ordering and timeout mechanisms."
+      difficulty: "intermediate"
+      follow_up: "How would you prevent or detect deadlocks in a system you're designing?"
+      tags:
+        - "interview:technical"
+        - "skill:systems"
+        - "topic:concurrency"
+      companies:
+        - "all"
+
+    - id: "qb-tech-010"
+      type: "technical"
+      section_ref: "technical-fundamentals"
+      question_text: "What is caching and why is it useful?"
+      category: "systems"
+      options:
+        - "Storing data permanently in a database"
+        - "Compressing data to save space"
+        - "Storing frequently accessed data in fast storage to reduce latency"
+        - "Encrypting sensitive data"
+      correct_answer: 2
+      explanation: "Caching stores copies of frequently accessed data in faster storage (memory vs. disk, local vs. remote) to reduce access latency and load on the original data source. Trade-offs include cache invalidation complexity and potential for stale data."
+      difficulty: "beginner"
+      follow_up: "What are some cache invalidation strategies? What problems can stale cache data cause?"
+      tags:
+        - "interview:technical"
+        - "skill:systems"
+        - "topic:caching"
+      companies:
+        - "all"
+
+    # =========================================================================
+    # Case Study Questions (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-case-001"
+      type: "case_study"
+      section_ref: "case-practice"
+      question_text: "Your client is a mid-sized retail chain experiencing declining foot traffic. Online sales have grown 15% but in-store sales dropped 25%. How would you approach this problem?"
+      context: "Classic consulting case testing structured problem-solving and business acumen."
+      case_study:
+        industry: "retail"
+        framework_hint: "Consider using a profitability or market analysis framework"
+        key_areas:
+          - "Market trends analysis"
+          - "Customer segmentation"
+          - "Channel strategy"
+          - "Cost structure"
+        sample_structure: |
+          1. Clarify: Ask about store locations, customer demographics, competitor actions
+          2. Hypothesize: The shift may be due to changing consumer preferences, competitor moves, or operational issues
+          3. Analyze: Break down by customer segment, geography, product category
+          4. Synthesize: Recommend omnichannel strategy, store format optimization, or targeted marketing
+        good_answer_elements:
+          - "Structured approach with clear framework"
+          - "Asks clarifying questions before diving in"
+          - "Considers multiple hypotheses"
+          - "Quantifies impact where possible"
+          - "Provides actionable recommendations"
+      difficulty: "intermediate"
+      estimated_time_minutes: 20
+      companies:
+        - "company:mckinsey"
+        - "company:bcg"
+        - "company:bain"
+      tags:
+        - "interview:case"
+        - "skill:problem-solving"
+        - "industry:retail"
+
+    - id: "qb-case-002"
+      type: "case_study"
+      section_ref: "case-practice"
+      question_text: "A major airline wants to improve customer satisfaction scores, which have dropped 20% over the past year. Where would you start your analysis?"
+      context: "Service industry case focusing on customer experience and operations."
+      case_study:
+        industry: "airlines"
+        framework_hint: "Consider customer journey mapping and root cause analysis"
+        key_areas:
+          - "Customer journey touchpoints"
+          - "Competitive benchmarking"
+          - "Operational metrics"
+          - "Employee satisfaction correlation"
+        sample_structure: |
+          1. Map the customer journey: booking, check-in, boarding, flight, arrival, baggage
+          2. Identify where satisfaction dropped most (survey data, complaints)
+          3. Analyze root causes: staffing, technology, policy changes, external factors
+          4. Prioritize fixes by impact and feasibility
+          5. Recommend quick wins and strategic initiatives
+        good_answer_elements:
+          - "Systematic journey mapping"
+          - "Data-driven root cause identification"
+          - "Consideration of employee experience"
+          - "Prioritized recommendations"
+          - "Implementation roadmap"
+      difficulty: "intermediate"
+      estimated_time_minutes: 20
+      companies:
+        - "company:mckinsey"
+        - "company:bcg"
+        - "company:bain"
+      tags:
+        - "interview:case"
+        - "skill:problem-solving"
+        - "industry:airlines"
+
+    - id: "qb-case-003"
+      type: "case_study"
+      section_ref: "case-practice"
+      question_text: "A streaming service is considering entering the live sports market. Should they pursue this opportunity?"
+      context: "Market entry case testing strategic thinking and financial analysis."
+      case_study:
+        industry: "media"
+        framework_hint: "Consider market attractiveness and competitive positioning"
+        key_areas:
+          - "Market size and growth"
+          - "Competitive landscape"
+          - "Required capabilities and investments"
+          - "Revenue model and unit economics"
+        sample_structure: |
+          1. Assess market: Size ($), growth rate, key segments (sports types, geographies)
+          2. Analyze competition: Who has rights, pricing, differentiation
+          3. Evaluate fit: Does this align with core capabilities and strategy?
+          4. Financial analysis: Investment required, break-even timeline, ROI
+          5. Risks: Rights costs, churn, technical challenges
+          6. Recommend: Enter/don't enter with specific approach
+        good_answer_elements:
+          - "Clear market sizing approach"
+          - "Competitive dynamics understanding"
+          - "Strategic fit assessment"
+          - "Financial framework"
+          - "Risk consideration"
+      difficulty: "advanced"
+      estimated_time_minutes: 25
+      companies:
+        - "company:mckinsey"
+        - "company:bcg"
+        - "company:bain"
+      tags:
+        - "interview:case"
+        - "skill:problem-solving"
+        - "industry:media"
+
+    - id: "qb-case-004"
+      type: "case_study"
+      section_ref: "case-practice"
+      question_text: "A pharmaceutical company's blockbuster drug is losing patent protection in 18 months. What should they do?"
+      context: "Strategic planning case with time pressure and multiple stakeholders."
+      case_study:
+        industry: "pharma"
+        framework_hint: "Consider portfolio strategy and competitive response"
+        key_areas:
+          - "Revenue at risk analysis"
+          - "Generic competition timeline"
+          - "Pipeline assessment"
+          - "Strategic options (M&A, partnerships, new indications)"
+        sample_structure: |
+          1. Quantify impact: Current revenue, expected erosion curve
+          2. Defensive strategies: Authorized generics, reformulations, patient programs
+          3. Offensive strategies: Pipeline acceleration, acquisitions, new markets
+          4. Evaluate options by NPV, risk, and strategic fit
+          5. Build implementation timeline working back from patent cliff
+        good_answer_elements:
+          - "Understanding of pharma industry dynamics"
+          - "Multiple strategic options considered"
+          - "Financial impact quantification"
+          - "Time-bound action plan"
+          - "Stakeholder considerations"
+      difficulty: "advanced"
+      estimated_time_minutes: 25
+      companies:
+        - "company:mckinsey"
+        - "company:bcg"
+        - "company:bain"
+      tags:
+        - "interview:case"
+        - "skill:problem-solving"
+        - "industry:pharma"
+
+    - id: "qb-case-005"
+      type: "case_study"
+      section_ref: "case-practice"
+      question_text: "Design a system to handle 10 million daily active users for a social media feed. Walk me through your approach."
+      context: "System design case for technical roles at top tech companies."
+      case_study:
+        industry: "tech"
+        framework_hint: "Consider scalability, reliability, and user experience"
+        key_areas:
+          - "Requirements gathering"
+          - "High-level architecture"
+          - "Data storage and retrieval"
+          - "Scaling strategies"
+          - "Trade-offs"
+        sample_structure: |
+          1. Clarify requirements: Read/write ratio, latency requirements, consistency needs
+          2. Estimate scale: QPS, storage, bandwidth
+          3. High-level design: CDN, load balancers, app servers, cache, database
+          4. Deep dive on feed generation: Push vs pull, fan-out strategies
+          5. Discuss trade-offs: Consistency vs availability, cost vs performance
+          6. Address failure scenarios and monitoring
+        good_answer_elements:
+          - "Clear requirements gathering"
+          - "Back-of-envelope calculations"
+          - "Layered architecture approach"
+          - "Understanding of trade-offs"
+          - "Consideration of edge cases"
+      difficulty: "advanced"
+      estimated_time_minutes: 45
+      companies:
+        - "company:google"
+        - "company:meta"
+        - "company:amazon"
+      tags:
+        - "interview:system-design"
+        - "skill:architecture"
+        - "industry:tech"
+
+    # =========================================================================
+    # Situational Questions (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-sit-001"
+      type: "situational"
+      section_ref: "situational-judgment"
+      question_text: "You discover a critical bug in production on Friday at 5 PM. Your team has plans for the weekend. What do you do?"
+      context: "Tests judgment, prioritization, and work-life balance considerations."
+      situational:
+        scenario_type: "incident-response"
+        factors_to_consider:
+          - "Severity of the bug (customer impact)"
+          - "Available mitigation options"
+          - "Team communication"
+          - "Escalation procedures"
+        strong_response_elements:
+          - "Assess severity before making decisions"
+          - "Communicate transparently with team"
+          - "Consider temporary mitigations"
+          - "Balance urgency with sustainability"
+        weak_response_elements:
+          - "Immediately canceling everyone's plans without assessment"
+          - "Ignoring it until Monday"
+          - "Fixing it alone without telling anyone"
+        sample_answer: |
+          First, I'd assess the severity: How many users affected? Is there a workaround? What's the business impact? If it's truly critical (data loss, security, major revenue impact), I'd communicate to the team transparently about the situation and ask for volunteers rather than demanding everyone stay. I'd look for a quick mitigation (feature flag, rollback) to reduce impact while we work on a proper fix. If severity allows, I might implement the mitigation myself and schedule the full fix for Monday with fresh minds.
+      difficulty: "intermediate"
+      estimated_time_minutes: 5
+      companies:
+        - "all"
+      tags:
+        - "interview:situational"
+        - "skill:judgment"
+        - "skill:leadership"
+
+    - id: "qb-sit-002"
+      type: "situational"
+      section_ref: "situational-judgment"
+      question_text: "Your manager asks you to implement a feature in a way you believe is technically wrong. How do you handle it?"
+      context: "Tests communication, influence, and professional judgment."
+      situational:
+        scenario_type: "disagreement"
+        factors_to_consider:
+          - "Understanding manager's reasoning"
+          - "Severity of technical concerns"
+          - "Communication approach"
+          - "When to escalate vs. defer"
+        strong_response_elements:
+          - "Seek to understand their perspective first"
+          - "Present concerns with data/evidence"
+          - "Offer alternatives"
+          - "Know when to disagree and commit"
+        weak_response_elements:
+          - "Silent compliance"
+          - "Going over their head immediately"
+          - "Passive-aggressive implementation"
+        sample_answer: |
+          I'd start by making sure I understand their reasoning—there might be context I'm missing (timeline pressure, strategic considerations, constraints I don't see). I'd then share my concerns with specifics: 'I'm worried this approach will cause X problem because Y. Could we consider Z instead?' If they still want to proceed their way and it's not a critical issue, I'd disagree and commit—document my concerns and execute well. If it's a serious issue (security, data integrity), I'd escalate appropriately.
+      difficulty: "intermediate"
+      estimated_time_minutes: 5
+      companies:
+        - "all"
+      tags:
+        - "interview:situational"
+        - "skill:communication"
+        - "skill:judgment"
+
+    - id: "qb-sit-003"
+      type: "situational"
+      section_ref: "situational-judgment"
+      question_text: "A colleague takes credit for your work in a team meeting. How do you respond?"
+      context: "Tests interpersonal skills and conflict navigation."
+      situational:
+        scenario_type: "interpersonal"
+        factors_to_consider:
+          - "Was it intentional or accidental?"
+          - "Relationship with the colleague"
+          - "Audience and context"
+          - "Long-term implications"
+        strong_response_elements:
+          - "Don't react emotionally in the moment"
+          - "Address privately first"
+          - "Assume positive intent initially"
+          - "Focus on future prevention"
+        weak_response_elements:
+          - "Calling them out publicly"
+          - "Saying nothing and harboring resentment"
+          - "Complaining to others without addressing directly"
+        sample_answer: |
+          In the moment, I wouldn't call them out publicly—that creates awkwardness and escalates unnecessarily. Afterward, I'd have a private conversation: 'Hey, I noticed in the meeting you presented the X analysis. I actually put that together—was there a miscommunication?' This assumes positive intent while making my contribution clear. If it was accidental, they'll likely apologize and correct it. If it becomes a pattern, I'd document my work more visibly (status updates, emails) and mention it to my manager as a pattern, not a single incident.
+      difficulty: "intermediate"
+      estimated_time_minutes: 5
+      companies:
+        - "all"
+      tags:
+        - "interview:situational"
+        - "skill:collaboration"
+        - "skill:communication"
+
+    - id: "qb-sit-004"
+      type: "situational"
+      section_ref: "situational-judgment"
+      question_text: "You're leading a project and realize you won't meet the deadline. What do you do?"
+      context: "Tests ownership, communication, and problem-solving under pressure."
+      situational:
+        scenario_type: "project-management"
+        factors_to_consider:
+          - "How much time is needed"
+          - "What's driving the delay"
+          - "Stakeholder impact"
+          - "Options for recovery"
+        strong_response_elements:
+          - "Early communication (don't wait until deadline)"
+          - "Come with options, not just problems"
+          - "Take ownership without blame"
+          - "Propose mitigation plan"
+        weak_response_elements:
+          - "Waiting until the last minute to communicate"
+          - "Blaming team members or external factors"
+          - "Promising to 'work harder' without concrete plan"
+        sample_answer: |
+          First rule: communicate early, not at the deadline. I'd assess the gap—how much more time do we need and why? Then I'd go to stakeholders with options: 'We're tracking to miss by X days. Here are three options: (1) reduce scope to features A and B, deliver on time; (2) add resources from team Y, deliver 3 days late; (3) full scope, 7 days late. I recommend option 1 because...' Taking ownership of the situation while providing choices makes the conversation productive rather than just delivering bad news.
+      difficulty: "intermediate"
+      estimated_time_minutes: 5
+      companies:
+        - "all"
+      tags:
+        - "interview:situational"
+        - "skill:leadership"
+        - "skill:communication"
+
+    - id: "qb-sit-005"
+      type: "situational"
+      section_ref: "situational-judgment"
+      question_text: "You join a new team and notice inefficient processes that no one else seems bothered by. What do you do?"
+      context: "Tests judgment about when and how to drive change as a newcomer."
+      situational:
+        scenario_type: "change-management"
+        factors_to_consider:
+          - "Understanding why things are done this way"
+          - "Building credibility first"
+          - "Timing of suggestions"
+          - "Change management approach"
+        strong_response_elements:
+          - "Listen and learn first"
+          - "Understand historical context"
+          - "Build relationships before pushing change"
+          - "Start small and prove value"
+        weak_response_elements:
+          - "Immediately criticizing existing processes"
+          - "Assuming you know better without context"
+          - "Waiting forever and never speaking up"
+        sample_answer: |
+          First, I'd resist the urge to immediately suggest changes. There's often context I don't have—maybe they tried something else and it failed, or there are constraints I don't see. I'd spend my first few weeks learning and asking curious questions: 'Help me understand why we do X this way?' After building some credibility through good work, I'd raise observations as questions: 'I noticed we spend a lot of time on X. Has the team considered Y approach?' Starting with a small pilot rather than a full overhaul reduces risk and builds trust.
+      difficulty: "intermediate"
+      estimated_time_minutes: 5
+      companies:
+        - "all"
+      tags:
+        - "interview:situational"
+        - "skill:judgment"
+        - "skill:adaptability"
+
+    # =========================================================================
+    # Culture Fit Questions (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-culture-001"
+      type: "culture_fit"
+      section_ref: "culture-assessment"
+      question_text: "What type of work environment do you thrive in?"
+      context: "Assesses self-awareness and cultural alignment."
+      culture_fit:
+        what_theyre_assessing:
+          - "Self-awareness about work style"
+          - "Fit with company culture"
+          - "Honesty vs. telling them what they want to hear"
+        tips:
+          - "Be honest—misalignment hurts both parties"
+          - "Research the company's culture beforehand"
+          - "Give specific examples"
+        red_flags:
+          - "I can work anywhere" (lacks self-awareness)
+          - "I need constant supervision" (for autonomous roles)
+          - "I hate collaboration" (for team-based cultures)
+        sample_answer: |
+          I do my best work in environments that balance autonomy with collaboration. I like having clear goals and the freedom to figure out how to achieve them, but I also value being able to bounce ideas off teammates and get feedback. I thrive with some structure—regular check-ins and clear priorities—but too much process slows me down. For example, at my last company, I appreciated our weekly syncs but also had flexibility to manage my own time day-to-day.
+      difficulty: "beginner"
+      estimated_time_minutes: 3
+      companies:
+        - "all"
+      tags:
+        - "interview:culture"
+        - "skill:self-awareness"
+
+    - id: "qb-culture-002"
+      type: "culture_fit"
+      section_ref: "culture-assessment"
+      question_text: "How do you handle stress and tight deadlines?"
+      context: "Assesses resilience and self-management."
+      culture_fit:
+        what_theyre_assessing:
+          - "Stress management strategies"
+          - "Performance under pressure"
+          - "Self-awareness about limits"
+        tips:
+          - "Show you have coping strategies"
+          - "Give a real example"
+          - "Acknowledge stress is normal"
+        red_flags:
+          - "I never get stressed" (unrealistic)"
+          - "I panic and shut down" (concerning)"
+          - "I just work more hours" (unsustainable)
+        sample_answer: |
+          I actually perform well under pressure—it helps me focus. That said, I've learned to manage stress proactively. When facing tight deadlines, I immediately prioritize ruthlessly and communicate with stakeholders about what's realistic. I break work into smaller chunks so I can see progress. I also make sure to maintain basics like sleep and exercise because I know my judgment deteriorates without them. For example, during a recent product launch, I mapped out every day leading to launch and identified early what we'd cut if we ran behind. That planning reduced stress significantly.
+      difficulty: "beginner"
+      estimated_time_minutes: 3
+      companies:
+        - "all"
+      tags:
+        - "interview:culture"
+        - "skill:resilience"
+
+    - id: "qb-culture-003"
+      type: "culture_fit"
+      section_ref: "culture-assessment"
+      question_text: "What motivates you in your work?"
+      context: "Assesses intrinsic motivation and values alignment."
+      culture_fit:
+        what_theyre_assessing:
+          - "Intrinsic vs. extrinsic motivation"
+          - "Alignment with role and company mission"
+          - "Long-term engagement potential"
+        tips:
+          - "Be genuine—forced answers are obvious"
+          - "Connect to the specific role"
+          - "Show depth beyond surface motivators"
+        red_flags:
+          - "Money" (as sole motivator)
+          - "I don't know" (lack of self-reflection)
+          - "Motivators misaligned with role"
+        sample_answer: |
+          I'm most motivated by solving meaningful problems and seeing tangible impact from my work. I love the moment when something I built helps a user accomplish their goal—that direct feedback loop is energizing. I'm also motivated by learning; I get restless if I'm not growing. At my last job, I was most engaged when working on our checkout optimization because I could see conversion rates improve weekly based on changes I made. That direct line between my work and business results kept me driven even when the technical work was challenging.
+      difficulty: "beginner"
+      estimated_time_minutes: 3
+      companies:
+        - "all"
+      tags:
+        - "interview:culture"
+        - "skill:self-awareness"
+
+    - id: "qb-culture-004"
+      type: "culture_fit"
+      section_ref: "culture-assessment"
+      question_text: "Tell me about a team you've enjoyed working with. What made it great?"
+      context: "Reveals collaboration style and team values."
+      culture_fit:
+        what_theyre_assessing:
+          - "What you value in teammates"
+          - "Your role in team dynamics"
+          - "Cultural fit indicators"
+        tips:
+          - "Be specific about what made it work"
+          - "Show your contribution to the dynamic"
+          - "Connect to what you hope to find here"
+        red_flags:
+          - "I prefer working alone"
+          - "Everything was perfect" (unrealistic)
+          - "Only external factors (not your contribution)"
+        sample_answer: |
+          The best team I worked on had a strong foundation of psychological safety—we could disagree openly without it getting personal. What made it work was that we established norms early: we'd debate ideas vigorously in meetings but commit fully once decisions were made. Everyone had clear ownership but helped each other when needed. I contributed by often being the one to ask 'devil's advocate' questions that surfaced issues early. The lead also did something I try to replicate now: celebrating learnings from failures, not just successes. That made everyone more willing to take smart risks.
+      difficulty: "beginner"
+      estimated_time_minutes: 3
+      companies:
+        - "all"
+      tags:
+        - "interview:culture"
+        - "skill:collaboration"
+
+    - id: "qb-culture-005"
+      type: "culture_fit"
+      section_ref: "culture-assessment"
+      question_text: "Where do you see yourself in five years?"
+      context: "Assesses ambition, planning, and retention risk."
+      culture_fit:
+        what_theyre_assessing:
+          - "Career trajectory alignment"
+          - "Ambition level"
+          - "Likelihood of staying"
+        tips:
+          - "Show ambition while being realistic"
+          - "Connect to growth possible at this company"
+          - "It's okay to show some uncertainty"
+        red_flags:
+          - "In your job" (to hiring manager)
+          - "Running my own company" (flight risk)
+          - "No idea" (lack of direction)
+        sample_answer: |
+          In five years, I'd like to have grown into a technical lead role where I'm not just building things myself but also helping others grow and shaping technical direction. I want to have deep expertise in distributed systems—that's an area I'm actively developing. I'm also interested in the leadership side: mentoring, making architectural decisions, influencing product direction with technical perspective. Honestly, exactly what that looks like depends on opportunities that arise, but the through-line is increasing impact through both technical depth and leadership scope.
+      difficulty: "beginner"
+      estimated_time_minutes: 3
+      companies:
+        - "all"
+      tags:
+        - "interview:culture"
+        - "skill:self-awareness"
+
+    # =========================================================================
+    # Company-Specific Questions: Google (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-google-001"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you used data to make a decision."
+      context: "Google values data-driven decision making ('Googleyness')."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "Google emphasizes using data over intuition. Show analytical thinking."
+        star_prompts:
+          situation: "What decision were you facing? What data was available?"
+          task: "What did you need to determine? Why was data important?"
+          action: "How did you gather and analyze the data? What tools/methods?"
+          result: "What did the data show? What decision did you make? What was the outcome?"
+        sample_answer: |
+          Situation: We were debating whether to rebuild our legacy API or incrementally improve it. The team was split, with strong opinions on both sides.
+
+          Task: I volunteered to bring data to the discussion instead of continuing to debate opinions.
+
+          Action: I analyzed three months of API logs to understand usage patterns. I found that 80% of traffic used just 15% of endpoints, and 40% of the codebase supported rarely-used features. I also surveyed the top 10 API consumers about pain points. I created a cost model comparing: maintain as-is, incremental improvement, and full rebuild.
+
+          Result: The data showed incremental improvement on high-traffic endpoints would deliver 90% of user value at 30% of rebuild cost. The team aligned behind this approach quickly once we had shared facts. We shipped improvements in 6 weeks that reduced p99 latency by 50%.
+        evaluation_criteria:
+          - "Proactive data gathering"
+          - "Appropriate analysis methods"
+          - "Data changed the conversation"
+          - "Clear outcome driven by data"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:google"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "google:googleyness"
+
+    - id: "qb-google-002"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Describe a time you had to make a decision without all the information you wanted."
+      context: "Google values 'bias to action' balanced with analytical rigor."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "Google wants people who can move quickly but thoughtfully under uncertainty."
+        star_prompts:
+          situation: "What was the decision? What information was missing?"
+          task: "Why couldn't you wait for more data? What were the stakes?"
+          action: "How did you reason through uncertainty? What heuristics did you use?"
+          result: "What did you decide? Was it the right call? What did you learn?"
+        sample_answer: |
+          Situation: During a production incident, we had to decide whether the root cause was our recent deployment or a third-party service issue. Full investigation would take 2+ hours, but users were affected now.
+
+          Task: As the on-call engineer, I needed to decide whether to rollback our deployment (safe but slow to re-deploy if wrong) or wait for more data.
+
+          Action: I applied a quick heuristic: what's the cost of each wrong decision? Rolling back unnecessarily cost 4 hours to re-deploy. Not rolling back when we should meant continued user impact. I also looked at circumstantial evidence: the third-party service had been stable for months while our deployment was hours old. I decided to rollback.
+
+          Result: The rollback fixed the issue. Post-mortem showed it was indeed our code. I documented my decision framework for future on-call engineers, and we added better canary metrics to catch similar issues before full rollout.
+        evaluation_criteria:
+          - "Clear reasoning under uncertainty"
+          - "Appropriate risk assessment"
+          - "Bias to action with mitigation"
+          - "Learning applied forward"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:google"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "google:googleyness"
+
+    - id: "qb-google-003"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about something you've built that you're proud of."
+      context: "Google assesses technical accomplishment and passion for building."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "Google looks for 'builders' who take pride in craft and impact."
+        star_prompts:
+          situation: "What did you build? What problem did it solve?"
+          task: "What was your role? What made this technically interesting?"
+          action: "How did you approach the design and implementation?"
+          result: "What was the impact? Why are you proud of it?"
+        sample_answer: |
+          Situation: Our team was spending 5+ hours weekly manually generating reports from multiple data sources. The process was error-prone and everyone dreaded report week.
+
+          Task: I proposed building an automated reporting pipeline. No one asked me to—I saw the problem and decided to solve it.
+
+          Action: I designed a system using Python and Airflow that pulled from our three data sources, validated data quality, generated reports, and emailed stakeholders. The interesting technical challenge was handling the inconsistent schemas across sources—I built a reconciliation layer that flagged discrepancies rather than silently merging bad data. I documented it thoroughly so others could maintain it.
+
+          Result: Reports now generate automatically overnight with zero manual intervention. We reclaimed 260+ hours annually across the team. I'm proud because it wasn't my job, I saw a problem and solved it end-to-end, and it's still running two years later. It also taught me that documentation is part of the craft—several teammates have extended it successfully.
+        evaluation_criteria:
+          - "Technical depth and quality"
+          - "Initiative and ownership"
+          - "Clear impact"
+          - "Pride in craftsmanship"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:google"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "google:googleyness"
+
+    # =========================================================================
+    # Company-Specific Questions: Amazon (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-amazon-001"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you simplified a process or eliminated unnecessary complexity."
+      context: "Amazon Leadership Principle: Invent and Simplify."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "Amazon values 'Invent and Simplify'—finding simpler solutions and removing unnecessary complexity."
+        star_prompts:
+          situation: "What was the complex or inefficient process?"
+          task: "Why did it need simplification? What was the impact of complexity?"
+          action: "How did you identify what to simplify? What did you change?"
+          result: "What was the improvement? How did you measure it?"
+        sample_answer: |
+          Situation: Our deployment process required 23 manual steps across 4 different tools, took 3 hours, and failed about 20% of the time due to human error. Engineers dreaded deployments.
+
+          Task: I took ownership of simplifying this even though 'it had always been this way' and others had accepted the complexity.
+
+          Action: I mapped every step and identified which were actually necessary vs. legacy artifacts. I found that 8 steps were for a system we'd deprecated years ago, and 6 others could be automated. I built a single deployment script that handled the essential steps, added validation gates to catch errors early, and created a one-page runbook for the remaining manual steps. I got buy-in by showing the team a demo rather than asking for permission first.
+
+          Result: Deployments dropped from 3 hours to 25 minutes. Failure rate went from 20% to near zero. We went from deploying weekly (because it was painful) to daily. The approach was adopted by two other teams.
+        evaluation_criteria:
+          - "Identified unnecessary complexity"
+          - "Took initiative despite 'that's how it's done'"
+          - "Measurable simplification"
+          - "Scaled the improvement"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "amazon:invent-simplify"
+
+    - id: "qb-amazon-002"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you took on something significant outside your area of responsibility."
+      context: "Amazon Leadership Principle: Ownership."
+      behavioral:
+        competency: "leadership"
+        company_context: "Amazon's 'Ownership' principle: Leaders act on behalf of the entire company, never say 'that's not my job.'"
+        star_prompts:
+          situation: "What was the problem that wasn't technically your responsibility?"
+          task: "Why did you decide to own it anyway? What was at stake?"
+          action: "What did you do? How did you navigate any organizational challenges?"
+          result: "What was the outcome? How was your ownership recognized?"
+        sample_answer: |
+          Situation: I noticed our customer churn had spiked 15% but no one was investigating because it fell between the product and customer success teams' responsibilities. Each thought the other was handling it.
+
+          Task: Though I was an engineer with no direct customer responsibility, I decided to investigate because it was clearly hurting the company and no one else was acting.
+
+          Action: I pulled churn data and correlated it with product usage patterns. I surveyed recently churned customers (after getting OK from customer success). I found that a feature change we'd made 2 months prior had broken a workflow that power users depended on—but they hadn't complained, they'd just left. I presented findings to both teams and proposed a fix. I also built a monitoring dashboard to catch similar patterns early.
+
+          Result: We restored the workflow and recovered about 30% of churned customers through outreach. The VP of Product mentioned the investigation in an all-hands as an example of ownership. More importantly, we caught a problem that had been invisible for months.
+        evaluation_criteria:
+          - "Acted beyond job description"
+          - "Company-level thinking"
+          - "Navigated cross-functional boundaries"
+          - "Significant positive outcome"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "amazon:ownership"
+
+    - id: "qb-amazon-003"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you made a decision that was unpopular but you believed was right."
+      context: "Amazon Leadership Principle: Have Backbone; Disagree and Commit."
+      behavioral:
+        competency: "leadership"
+        company_context: "Amazon values leaders who 'Have Backbone' to respectfully challenge decisions, then commit fully once decided."
+        star_prompts:
+          situation: "What was the unpopular decision or stance?"
+          task: "Why did you believe it was right? What pressure were you facing?"
+          action: "How did you advocate for your position? How did you handle disagreement?"
+          result: "What was the outcome? Were you vindicated or did you learn something?"
+        sample_answer: |
+          Situation: My team wanted to adopt a trendy new framework that would require rewriting significant portions of our codebase. Everyone was excited about learning it, and saying 'no' felt like being the boring person.
+
+          Task: I believed the rewrite wasn't justified by any business need and would delay our roadmap by months. I needed to voice dissent without damaging team morale.
+
+          Action: I wrote a document comparing our current stack with the proposed one across dimensions that mattered: development velocity, hiring, maintenance burden, and learning curve. I showed that our current stack was actually better for our specific use case, and the new framework's benefits were for problems we didn't have. I presented this to the team, acknowledging the appeal of the new technology while focusing on business outcomes.
+
+          Result: After discussion, the team agreed to stay with our current stack. A few months later, we heard another team that had adopted the new framework struggled with unexpected complexity. Some teammates thanked me for 'being the adult in the room.' I learned that having backbone sometimes means being unpopular in the moment.
+        evaluation_criteria:
+          - "Clear, principled reasoning"
+          - "Data-driven advocacy"
+          - "Respectful disagreement"
+          - "Commitment to outcome over popularity"
+      difficulty: "advanced"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "amazon:have-backbone"
+
+    - id: "qb-amazon-004"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you delivered results under a tight deadline."
+      context: "Amazon Leadership Principle: Deliver Results."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "Amazon's 'Deliver Results' principle: Leaders focus on key inputs and deliver with the right quality and in a timely fashion."
+        star_prompts:
+          situation: "What was the deadline and why was it challenging?"
+          task: "What needed to be delivered? What were the constraints?"
+          action: "How did you ensure delivery? What trade-offs did you make?"
+          result: "Did you meet the deadline? What was the quality of the delivery?"
+        sample_answer: |
+          Situation: A key customer had a contractual deadline for a feature integration—if we missed it, we'd lose a $2M annual contract. We had 3 weeks, but similar features had taken 6+ weeks historically.
+
+          Task: As tech lead, I needed to deliver full functionality in half the normal time without sacrificing quality where it mattered.
+
+          Action: I started by identifying what 'done' meant for the customer vs. our internal definition. I found we could defer some admin features and documentation that weren't needed for go-live. I negotiated with the PM to de-scope those. I then parallelized work aggressively, pairing senior engineers with junior ones so nothing was blocked. I ran daily standups to surface blockers immediately. When we hit an unexpected integration issue, I personally jumped in to unblock rather than wait for the specialist.
+
+          Result: We delivered the customer-facing functionality in 2.5 weeks, with the deferred work completed the following sprint. The customer renewed the contract and expanded their usage. My manager noted the delivery as evidence for my promotion to senior.
+        evaluation_criteria:
+          - "Clear focus on what matters"
+          - "Smart trade-offs"
+          - "Hands-on leadership"
+          - "Successful delivery"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:amazon"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+        - "amazon:deliver-results"
+
+    # =========================================================================
+    # Company-Specific Questions: McKinsey (Chunk 6 Expansion)
+    # =========================================================================
+
+    - id: "qb-mckinsey-001"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you influenced a group of people to achieve a goal."
+      context: "McKinsey Personal Experience Interview (PEI) - Leadership dimension."
+      behavioral:
+        competency: "leadership"
+        company_context: "McKinsey PEI assesses three dimensions: Leadership, Personal Impact, and Entrepreneurial Drive."
+        star_prompts:
+          situation: "What was the goal? What was your role relative to the group?"
+          task: "What made influence necessary (vs. just directing)? What were the challenges?"
+          action: "What specific influence tactics did you use? How did you bring people along?"
+          result: "Did you achieve the goal? How did you measure success?"
+        sample_answer: |
+          Situation: As president of our university consulting club, I wanted to launch a new mentorship program matching students with alumni. The executive board was skeptical—previous initiatives had failed due to low engagement.
+
+          Task: I had no formal authority over the 8 board members; I needed to influence them to commit their time to something they doubted would work.
+
+          Action: Instead of pushing my vision, I started by understanding their concerns. The main fear was investing effort in something that would fizzle. I proposed a minimal pilot: just 10 pairs over one semester, with clear success metrics. I personally recruited 5 committed alumni to demonstrate demand. I addressed the 'effort' concern by volunteering to manage the pilot myself, only asking others for one task each. Once skeptics saw the pilot data, they became advocates.
+
+          Result: The pilot achieved 90% satisfaction from both mentors and mentees. The board unanimously approved full launch. Three years later, the program is still running with 100+ pairs annually. I learned that reducing perceived risk is often more important than selling the vision.
+        evaluation_criteria:
+          - "Influence without authority"
+          - "Understanding others' concerns"
+          - "Strategic approach to gaining buy-in"
+          - "Measurable leadership impact"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:mckinsey"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "mckinsey:pei"
+
+    - id: "qb-mckinsey-002"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Describe a time when you created impact in an organization or community."
+      context: "McKinsey Personal Experience Interview (PEI) - Personal Impact dimension."
+      behavioral:
+        competency: "problem-solving"
+        company_context: "McKinsey assesses candidates' ability to create meaningful change, not just complete tasks."
+        star_prompts:
+          situation: "What organization or community? What opportunity or problem did you identify?"
+          task: "What did you set out to achieve? Why did it matter?"
+          action: "What specifically did you do? How did you overcome obstacles?"
+          result: "What was the measurable impact? Is it lasting?"
+        sample_answer: |
+          Situation: I noticed that our company's engineering blog had been dormant for 18 months despite having talented engineers. When I asked why, people said 'no time' and 'I don't know what to write about.'
+
+          Task: I believed a strong engineering blog would help recruiting, establish thought leadership, and give engineers professional development. I wanted to revive it without it feeling like extra work.
+
+          Action: I created a 'blog from your work' system: I interviewed engineers about interesting problems they'd already solved and ghostwrote first drafts for them to refine. This reduced the barrier dramatically. I also got leadership to allow 4 hours monthly for blog work. I established an editorial calendar and personally published the first 3 posts to demonstrate the format.
+
+          Result: Within 6 months, we had 12 posts from 8 different authors. Our careers page traffic increased 40%, and 3 candidates mentioned the blog as why they applied. Two engineers said the blog posts helped them get invited to conference speaking. The system is now self-sustaining without my involvement.
+        evaluation_criteria:
+          - "Self-initiated impact"
+          - "Creative problem-solving"
+          - "Quantifiable results"
+          - "Sustainable change"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:mckinsey"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+        - "mckinsey:pei"
+
+    - id: "qb-mckinsey-003"
+      type: "behavioral"
+      section_ref: "company-specific"
+      question_text: "Tell me about a time you set a challenging goal for yourself and achieved it."
+      context: "McKinsey Personal Experience Interview (PEI) - Entrepreneurial Drive dimension."
+      behavioral:
+        competency: "adaptability"
+        company_context: "McKinsey values candidates who set ambitious goals, show resilience, and achieve results."
+        star_prompts:
+          situation: "What was the goal? Why was it challenging?"
+          task: "What motivated you to pursue this? What would success look like?"
+          action: "How did you approach achieving it? How did you handle setbacks?"
+          result: "Did you achieve the goal? What did you learn about yourself?"
+        sample_answer: |
+          Situation: I set a goal to pass the CFA Level 1 exam while working full-time as a software engineer, with no finance background. Most candidates are finance professionals who study 300+ hours.
+
+          Task: I wanted to broaden my skillset and prove I could master a completely new domain. Success meant passing on the first attempt within 6 months.
+
+          Action: I created a detailed study plan working backwards from the exam date, allocating 15 hours weekly. I identified my weakest areas (accounting, fixed income) and front-loaded them. When I fell behind due to a work crunch, I renegotiated my plan rather than abandoning it—I gave up a vacation to catch up. I joined a study group for accountability. When practice exams showed I was borderline, I added 5 hours weekly for the final month.
+
+          Result: I passed in the top quartile. Beyond the credential, I proved to myself that I could master unfamiliar material through structured effort. This gave me confidence to later take on a product role that seemed outside my background. The discipline I developed studying has transferred to other challenging goals.
+        evaluation_criteria:
+          - "Self-imposed ambitious goal"
+          - "Structured approach"
+          - "Resilience through obstacles"
+          - "Achievement and learning"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "company:mckinsey"
+      tags:
+        - "interview:behavioral"
+        - "skill:adaptability"
+        - "mckinsey:pei"

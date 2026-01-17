@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-2, 8-9 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-11, 13 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -12,17 +12,17 @@
 |-------|-------------|--------|
 | 1 | Verify Search Volume Analysis (R1) | **Complete** |
 | 2 | Hiring Push Identification (R2) | **Complete** |
-| 3 | AI Marketing Copy - Prompt Template (C3) | Not Started |
-| 4 | AI Marketing Copy - Sample Outputs (C3) | Not Started |
-| 5 | Question Bank Expansion - Part 1 (C4) | Not Started |
-| 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
-| 7 | Domain Strategy (M2) | Not Started |
+| 3 | AI Marketing Copy - Prompt Template (C3) | **Complete** |
+| 4 | AI Marketing Copy - Sample Outputs (C3) | **Complete** |
+| 5 | Question Bank Expansion - Part 1 (C4) | **Complete** |
+| 6 | Question Bank Expansion - Part 2 (C4) | **Complete** |
+| 7 | Domain Strategy (M2) | **Complete** |
 | 8 | Tech Stack Decision | **Complete** |
 | 9 | Landing Page Template (P1) | **Complete** |
-| 10 | Deploy Test Positions (P1) | Not Started |
-| 11 | Free Tier Experience (P2) | Not Started |
+| 10 | Deploy Test Positions (P1) | **Complete** |
+| 11 | Free Tier Experience (P2) | **Complete** |
 | 12 | Payment Integration (P3) | Not Started |
-| 13 | Premium Content Delivery (P4) | Not Started |
+| 13 | Premium Content Delivery (P4) | **Complete** |
 | 14 | Google Ads Campaign Structure (M1) | Not Started |
 | 15 | Analytics Requirements (M3) | Not Started |
 | 16 | Voice Mock Interview Feasibility (F1) | Deferred |
@@ -77,75 +77,110 @@
 
 ## Chunk 3: AI Marketing Copy - Prompt Template (C3)
 
-- [ ] Create prompt template accepting: company name, role title, industry, key challenges
-- [ ] Define output format: headline, subheadline, 3 bullets, CTA, meta description
-- [ ] Create style guide for brand voice
-- [ ] Define quality checklist
-- [ ] Document A/B test variants (urgency vs. expertise vs. insider knowledge)
+- [x] Create prompt template accepting: company name, role title, industry, key challenges
+- [x] Define output format: headline, subheadline, 3 bullets, CTA, meta description
+- [x] Create style guide for brand voice
+- [x] Define quality checklist
+- [x] Document A/B test variants (urgency vs. expertise vs. insider knowledge)
 
 **Deliverable:** `docs/marketing/prompt-template.md`
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Master prompt template with 7 input variables
+- 3 A/B test variants: Urgency, Expertise, Insider Knowledge
+- Complete style guide with do/don't examples
+- Quality checklist covering accuracy, brand, technical, legal, SEO
+- 3 example outputs (Google SWE, McKinsey, Amazon SWE)
 
 ---
 
 ## Chunk 4: AI Marketing Copy - Sample Outputs (C3)
 
-- [ ] Generate 10 sample outputs using template from Chunk 3
-- [ ] Validate tone and accuracy for each
-- [ ] Ensure no hallucinated facts
-- [ ] Verify consistent brand voice
-- [ ] Document which A/B variant each sample represents
+- [x] Generate 10 sample outputs using template from Chunk 3
+- [x] Validate tone and accuracy for each
+- [x] Ensure no hallucinated facts
+- [x] Verify consistent brand voice
+- [x] Document which A/B variant each sample represents
 
 **Deliverable:** `docs/marketing/sample-outputs.md`
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 3
+
+**Summary:**
+- 10 validated samples: Google, Amazon, McKinsey, Meta, Goldman, Microsoft, BCG, Apple, Stripe, Deloitte
+- A/B variant distribution: 4 Expertise, 3 Urgency, 3 Insider Knowledge
+- All passed quality checklist (character limits, accuracy, brand voice)
 
 ---
 
 ## Chunk 5: Question Bank Expansion - Part 1 (C4)
 
-- [ ] Add 10 behavioral questions (STAR format)
-- [ ] Add 10 technical questions
-- [ ] Include for each: question text, category, difficulty, tags, sample answer, framework, common mistakes, source
-- [ ] Tag questions with applicable modules
+- [x] Add 10 behavioral questions (STAR format)
+- [x] Add 10 technical questions
+- [x] Include for each: question text, category, difficulty, tags, sample answer, framework, common mistakes, source
+- [x] Tag questions with applicable modules
 
 **Deliverable:** Updated question bank (35 total questions)
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Added 10 behavioral questions (decision-making, going above & beyond, feedback, stakeholders, learning, prioritization, problem identification, mentoring, pushing back, adapting to change)
+- Added 10 technical questions (hash tables, stacks, processes/threads, DB indexes, REST APIs, load balancers, SQL/NoSQL, Big O, deadlocks, caching)
+- All questions include full metadata, sample answers, and evaluation criteria
 
 ---
 
 ## Chunk 6: Question Bank Expansion - Part 2 (C4)
 
-- [ ] Add 5 case study questions
-- [ ] Add 5 situational questions
-- [ ] Add 5 culture fit questions
-- [ ] Add 10 company-specific questions (top 3 target companies)
-- [ ] Ensure 50+ total questions reached
+- [x] Add 5 case study questions
+- [x] Add 5 situational questions
+- [x] Add 5 culture fit questions
+- [x] Add 10 company-specific questions (top 3 target companies)
+- [x] Ensure 50+ total questions reached (60 total)
 
 **Deliverable:** Complete question bank with 50+ entries
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 5
+
+**Summary:**
+- 5 case study questions (retail, airlines, streaming, pharma, system design)
+- 5 situational questions (incident response, disagreement, credit-taking, missed deadline, process change)
+- 5 culture fit questions (work environment, stress, motivation, team values, 5-year goals)
+- 10 company-specific questions:
+  - Google (3): data-driven decisions, decisions under uncertainty, pride in building
+  - Amazon (4): Invent & Simplify, Ownership, Have Backbone, Deliver Results
+  - McKinsey (3): Leadership, Personal Impact, Entrepreneurial Drive (PEI format)
+- **Total questions: 60** (exceeds 50+ target)
 
 ---
 
 ## Chunk 7: Domain Strategy (M2)
 
-- [ ] Evaluate: separate domains vs. subdomains vs. path-based
-- [ ] Document pros/cons (SEO, cost, management)
-- [ ] Make recommendation
-- [ ] Plan for 5 test domains/URLs
-- [ ] Define SSL requirements
-- [ ] Define redirect logic for future consolidation
+- [x] Evaluate: separate domains vs. subdomains vs. path-based
+- [x] Document pros/cons (SEO, cost, management)
+- [x] Make recommendation
+- [x] Plan for 5 test domains/URLs
+- [x] Define SSL requirements
+- [x] Define redirect logic for future consolidation
 
 **Deliverable:** `docs/marketing/domain-strategy.md`
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Evaluated 3 options: separate domains, subdomains, path-based
+- **Recommendation: Path-based** (`togtog.com/prep/[slug]`) - best SEO equity, lowest cost, simplest management
+- Cost analysis: Path-based saves ~$2,000/year vs separate domains
+- 5 test URLs documented (3 live, 2 planned)
+- SSL handled by Vercel (automatic), HSTS configuration provided
+- Redirect strategy defined for company rebrands, URL restructures, position consolidation
 
 ---
 
@@ -192,34 +227,56 @@
 
 ## Chunk 10: Deploy Test Positions (P1)
 
-- [ ] Deploy landing page for Position 1
-- [ ] Deploy landing page for Position 2
-- [ ] Deploy landing page for Position 3
-- [ ] Verify mobile responsiveness
-- [ ] Test page load speed (<2s on 3G)
+- [x] Deploy landing page for Position 1 (Google SWE)
+- [x] Deploy landing page for Position 2 (Amazon SWE)
+- [x] Deploy landing page for Position 3 (McKinsey Consultant)
+- [x] Verify mobile responsiveness
+- [x] Test page load speed (<2s on 3G)
 
 **Deliverable:** 3 live landing pages
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 9
+
+**Live URLs:**
+- Home: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/
+- Google SWE: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/google-software-engineer
+- Amazon SWE: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/amazon-software-engineer
+- McKinsey: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/mckinsey-consultant
 
 ---
 
 ## Chunk 11: Free Tier Experience (P2)
 
-- [ ] Display 5-10 free questions without login
-- [ ] Show question text, category badge, difficulty
-- [ ] Implement answer blur/fade behind paywall
-- [ ] Add "Unlock full answer" CTA
-- [ ] Implement engagement tracking
-- [ ] Optional email capture with value prop
+- [x] Display 5-10 free questions without login
+- [x] Show question text, category badge, difficulty
+- [x] Implement answer blur/fade behind paywall
+- [x] Add "Unlock full answer" CTA
+- [x] Implement engagement tracking (basic - expand/collapse)
+- [x] Optional email capture with value prop (CTA for free PDF)
 
 **Deliverable:** Free tier functional with analytics
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 10
+
+**Summary:**
+- Created Question type definitions and sample questions data (10 questions from question bank)
+- Built QuestionCard component with:
+  - Question type badges (Behavioral, Technical, Case Study, Situational, Culture Fit)
+  - Difficulty badges (Beginner, Intermediate, Advanced)
+  - Estimated time display
+  - Expandable answer section
+  - Blur effect for premium answers with unlock CTA overlay
+- Built QuestionsSection component with:
+  - Filter tabs by question type
+  - Show more/less functionality
+  - Unlock CTA banner with email capture option
+  - Question stats display
+- Integrated into landing pages (Google, Amazon, McKinsey)
+- Build verified successful
 
 ---
 
@@ -243,18 +300,28 @@
 
 ## Chunk 13: Premium Content Delivery (P4)
 
-- [ ] Magic link authentication (no password)
-- [ ] Dashboard: purchased position, module list, progress
-- [ ] Module view with completion checkboxes
-- [ ] Question bank with filters
-- [ ] Progress persistence across sessions
-- [ ] Indefinite access (no expiration)
+- [ ] Magic link authentication (no password) - *Deferred until Chunk 12*
+- [x] Dashboard: question bank view with progress
+- [x] Module view with completion checkboxes
+- [x] Question bank with filters (type, difficulty, company)
+- [x] Progress persistence across sessions (localStorage)
+- [x] Indefinite access (no expiration)
 
-**Deliverable:** Authenticated user flow with progress tracking
+**Deliverable:** Dashboard with progress tracking (ungated for refinement)
 
-**Status:** Not Started
+**Status:** **Complete** (ungated per user request)
 
-**Depends On:** Chunk 12
+**Depends On:** Chunk 12 (auth deferred)
+
+**Summary:**
+- Created `/dashboard` page with full question bank view
+- Three filter dropdowns: Question Type, Difficulty, Company
+- Progress tracking with completion checkboxes
+- localStorage persistence for completed questions
+- Progress bar showing completion percentage
+- ~30 questions populated from question bank
+- QuestionsSection links to dashboard for full access
+- Authentication deferred until payment integration (Chunk 12)
 
 ---
 
@@ -340,4 +407,12 @@
 | 2026-01-17 | 1 | Verified R1 Excel - all acceptance criteria met |
 | 2026-01-17 | 2 | Created hiring push tracker - 25 companies, 8 recurring events |
 | 2026-01-17 | 8, 9 | Tech stack (Next.js/Vercel/Supabase) + Landing page template |
+| 2026-01-17 | 10 | Deployed to Vercel - 3 live landing pages |
+| 2026-01-17 | 3 | Marketing copy prompt template + style guide + A/B variants |
+| 2026-01-17 | 4 | Generated 10 validated sample outputs for landing pages |
+| 2026-01-17 | 5 | Added 20 questions (10 behavioral, 10 technical) - now 35 total |
+| 2026-01-17 | 6 | Added 25 questions (5 case, 5 situational, 5 culture, 10 company-specific) - now 60 total |
+| 2026-01-17 | 7 | Domain strategy - path-based recommended, SSL/redirect requirements defined |
+| 2026-01-17 | 11 | Free tier experience - questions displayed with blur effect, unlock CTAs |
+| 2026-01-17 | 13 | Premium dashboard - question bank, filters, progress tracking (ungated) |
 
