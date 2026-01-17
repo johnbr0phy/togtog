@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey Option C - Stark Minimal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --gray: #666666;
+      --line: #222222;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    .screen {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+      color: var(--gray);
+    }
+
+    .step-counter {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+    }
+
+    .close-btn {
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .close-btn:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .category {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 2rem;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .question {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 600;
+      line-height: 1.15;
+      text-align: center;
+      max-width: 580px;
+      margin-bottom: 4rem;
+      animation: slideUp 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      width: 100%;
+      max-width: 400px;
+      animation: slideUp 0.5s ease 0.1s both;
+    }
+
+    .option {
+      padding: 1.25rem 1rem;
+      background: var(--black);
+      border: none;
+      color: var(--white);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .option:hover {
+      background: #111;
+    }
+
+    .option.selected {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .progress-bar {
+      flex: 1;
+      max-width: 200px;
+      height: 2px;
+      background: var(--line);
+      margin-right: 2rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--white);
+      width: 25%;
+      transition: width 0.5s ease;
+    }
+
+    .next-btn {
+      padding: 1rem 2.5rem;
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .next-btn:hover:not(:disabled) {
+      background: #eee;
+    }
+
+    .next-btn:disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+
+    /* Decorative line */
+    .accent-line {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      width: 3rem;
+      height: 1px;
+      background: var(--gray);
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <header>
+      <span class="logo">TOGTOG</span>
+      <span class="step-counter">02 / 12</span>
+      <button class="close-btn">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <div class="category">Company Knowledge</div>
+
+      <h1 class="question">When was Amazon founded?</h1>
+
+      <div class="options">
+        <button class="option" onclick="selectOption(this)">1990</button>
+        <button class="option" onclick="selectOption(this)">1994</button>
+        <button class="option" onclick="selectOption(this)">1998</button>
+        <button class="option" onclick="selectOption(this)">2001</button>
+      </div>
+    </main>
+
+    <div class="accent-line"></div>
+
+    <footer>
+      <div class="progress-bar">
+        <div class="progress-fill"></div>
+      </div>
+      <button class="next-btn" disabled>CONTINUE →</button>
+    </footer>
+  </div>
+
+  <script>
+    function selectOption(el) {
+      document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      document.querySelector('.next-btn').disabled = false;
+    }
+  </script>
+</body>
+</html>

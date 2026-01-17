@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journey Option D - Premium Refined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #0c0c0c;
+      --surface: #161616;
+      --text: #f5f5f5;
+      --muted: #6b6b6b;
+      --gold: #c4a76c;
+      --gold-dim: rgba(196, 167, 108, 0.15);
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    /* Subtle grain texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .screen {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Header */
+    header {
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .step-indicator {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    .step-indicator span {
+      color: var(--gold);
+    }
+
+    .close-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid #2a2a2a;
+      border-radius: 50%;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .close-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* Progress */
+    .progress-container {
+      padding: 0 2.5rem;
+    }
+
+    .progress-track {
+      height: 1px;
+      background: #2a2a2a;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), #d4b87a);
+      width: 25%;
+      transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .progress-glow {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--gold), 0 0 40px rgba(196, 167, 108, 0.3);
+      opacity: 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: translateY(-50%) scale(1); }
+      50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .module-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--gold-dim);
+      border: 1px solid rgba(196, 167, 108, 0.2);
+      border-radius: 2rem;
+      margin-bottom: 2.5rem;
+      animation: fadeDown 0.6s ease;
+    }
+
+    .module-badge span {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .question {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 3.25rem);
+      font-weight: 400;
+      line-height: 1.25;
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+      animation: fadeUp 0.7s ease;
+    }
+
+    .question em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+      width: 100%;
+      max-width: 380px;
+      animation: fadeUp 0.7s ease 0.15s both;
+    }
+
+    .option {
+      position: relative;
+      padding: 1.25rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid #252525;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      color: var(--text);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .option::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(196, 167, 108, 0.1), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .option:hover {
+      border-color: #3a3a3a;
+      transform: translateY(-2px);
+    }
+
+    .option:hover::before {
+      opacity: 1;
+    }
+
+    .option.selected {
+      border-color: var(--gold);
+      background: linear-gradient(135deg, rgba(196, 167, 108, 0.15), rgba(196, 167, 108, 0.05));
+    }
+
+    .option.selected::after {
+      content: '';
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.25rem;
+      height: 1.25rem;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .next-btn {
+      padding: 1.125rem 3.5rem;
+      background: linear-gradient(135deg, var(--gold), #b89a5a);
+      color: var(--bg);
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(196, 167, 108, 0.2);
+    }
+
+    .next-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(196, 167, 108, 0.35);
+    }
+
+    .next-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    /* Decorative elements */
+    .corner-accent {
+      position: fixed;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #1a1a1a;
+      pointer-events: none;
+    }
+
+    .corner-accent.top-left {
+      top: 1rem;
+      left: 1rem;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .corner-accent.bottom-right {
+      bottom: 1rem;
+      right: 1rem;
+      border-left: none;
+      border-top: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="screen">
+    <div class="corner-accent top-left"></div>
+    <div class="corner-accent bottom-right"></div>
+
+    <header>
+      <span class="logo">togtog</span>
+      <div class="header-right">
+        <span class="step-indicator"><span>02</span> of 12</span>
+        <button class="close-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="progress-container">
+      <div class="progress-track">
+        <div class="progress-fill">
+          <div class="progress-glow"></div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="module-badge">
+        <span>Amazon Fundamentals</span>
+      </div>
+
+      <h1 class="question">When was <em>Amazon</em> founded?</h1>
+
+      <div class="options">
+        <button class="option" onclick="selectOption(this)">1990</button>
+        <button class="option" onclick="selectOption(this)">1994</button>
+        <button class="option" onclick="selectOption(this)">1998</button>
+        <button class="option" onclick="selectOption(this)">2001</button>
+      </div>
+    </main>
+
+    <footer>
+      <button class="next-btn" disabled>CONTINUE</button>
+    </footer>
+  </div>
+
+  <script>
+    function selectOption(el) {
+      document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      document.querySelector('.next-btn').disabled = false;
+    }
+  </script>
+</body>
+</html>
