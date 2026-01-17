@@ -8,6 +8,7 @@ export function generateStaticParams() {
   }));
 }
 
-export default function StagePage({ params }: { params: { slug: string } }) {
-  return <StagePageClient slug={params.slug} />;
+export default async function StagePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return <StagePageClient slug={slug} />;
 }
