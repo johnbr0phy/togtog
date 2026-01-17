@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Position } from '@/lib/types';
 
 interface PricingSectionProps {
@@ -62,12 +63,12 @@ export function PricingSection({ position }: PricingSectionProps) {
               <p className="text-sm text-slate-400 mt-4">
                 Secure checkout powered by Stripe
               </p>
-              <a
+              <Link
                 href="/dashboard"
                 className="inline-block mt-4 text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
               >
                 Try the full dashboard →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
