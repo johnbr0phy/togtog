@@ -1,0 +1,377 @@
+# =============================================================================
+# Question Bank: Universal Behavioral Interview Prep
+# Module: univ-behavioral-001
+# =============================================================================
+
+question_bank:
+  id: "qb-univ-behavioral"
+  module_ref: "univ-behavioral-001"
+  version: "1.0.0"
+
+  questions:
+    # =========================================================================
+    # STAR Method Practice Questions (Section 3)
+    # =========================================================================
+
+    - id: "qb-univ-beh-001"
+      type: "multiple_choice"
+      section_ref: "star-practice"
+      question_text: "In the STAR method, what percentage of your answer should focus on the Action component?"
+      options:
+        - "10-15%"
+        - "25-30%"
+        - "50-60%"
+        - "70-80%"
+      correct_answer: 2  # Index 2 = "50-60%"
+      explanation: "The Action section should comprise 50-60% of your answer. This is where you demonstrate your skills, judgment, and approach—the core of what interviewers want to assess."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-002"
+      type: "multiple_choice"
+      section_ref: "star-practice"
+      question_text: "What is the ideal total length for a STAR-formatted behavioral answer?"
+      options:
+        - "30 seconds to 1 minute"
+        - "2-3 minutes"
+        - "5-7 minutes"
+        - "As long as needed to tell the full story"
+      correct_answer: 1  # Index 1 = "2-3 minutes"
+      explanation: "Behavioral answers should be 2-3 minutes. Under 2 minutes typically lacks depth, while over 3 minutes risks losing the interviewer's attention. Practice with a timer to calibrate."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-003"
+      type: "multiple_choice"
+      section_ref: "star-practice"
+      question_text: "Which of the following is the BEST example of a quantified Result?"
+      options:
+        - "The project was successful and everyone was happy"
+        - "We reduced page load time by 40%, improving user retention by 15%"
+        - "The feature launched on time"
+        - "My manager said it was one of the best projects they'd seen"
+      correct_answer: 1  # Index 1 = specific metrics
+      explanation: "Quantified results with specific metrics (40% reduction, 15% improvement) are most compelling. They provide concrete evidence of impact rather than subjective assessments."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+        - "skill:problem-solving"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-004"
+      type: "multiple_choice"
+      section_ref: "star-practice"
+      question_text: "When describing your Actions in a STAR response, you should:"
+      options:
+        - "Use 'we' to show you're a team player"
+        - "Use 'I' statements to clarify your specific contributions"
+        - "Describe what the team accomplished without specifying individual roles"
+        - "Focus primarily on what others did wrong that you had to fix"
+      correct_answer: 1  # Index 1 = "I" statements
+      explanation: "Use 'I' statements to make your personal contribution clear. While acknowledging team efforts is good, interviewers need to understand YOUR specific actions and decisions."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-005"
+      type: "multiple_choice"
+      section_ref: "star-practice"
+      question_text: "What should you include in the Situation portion of your STAR answer?"
+      options:
+        - "A detailed history of the company and your entire career leading up to that moment"
+        - "Only the challenge—no background context is needed"
+        - "Brief context about when/where, relevant background, and key constraints"
+        - "A dramatic setup to make the story more engaging"
+      correct_answer: 2  # Index 2 = brief context
+      explanation: "The Situation should provide just enough context (when, where, relevant background, constraints) for the interviewer to understand the circumstances. Keep it to 15-20 seconds—save time for Actions and Results."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    # =========================================================================
+    # Common Questions Practice (Section 6)
+    # =========================================================================
+
+    - id: "qb-univ-beh-006"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you led a project or team."
+      context: "This question assesses leadership capabilities regardless of formal management title."
+      behavioral:
+        competency: "leadership"
+        star_prompts:
+          situation: "Describe a project where you took a leadership role. What was the scope and why was leadership needed?"
+          task: "What was your specific responsibility? What were you trying to achieve?"
+          action: "What steps did you take to lead the team? How did you make decisions, handle obstacles, and motivate others?"
+          result: "What was the outcome? How did your leadership contribute to success?"
+        sample_answer: |
+          Situation: Last year, our team was tasked with migrating our payment system to a new provider within 6 weeks before our contract expired. The project had been delayed twice before due to lack of clear ownership.
+
+          Task: I volunteered to lead the migration even though I wasn't the most senior engineer, because I had experience with the new provider from a previous role. My goal was to deliver the migration with zero downtime and no customer impact.
+
+          Action: I started by creating a detailed project plan with clear milestones and owners for each component. I set up daily standups to surface blockers quickly. When our database team pushed back on the timeline, I worked with them to understand their concerns and we agreed on a phased approach that addressed their risks. I also created a runbook for the cutover and ran two dry-run migrations on staging to build team confidence.
+
+          Result: We completed the migration in 5 weeks with zero downtime. The phased approach we developed became the template for future migrations. I was asked to lead two subsequent infrastructure projects based on this experience.
+        evaluation_criteria:
+          - "Clear personal ownership and initiative"
+          - "Specific leadership actions (not just coordination)"
+          - "Evidence of influencing others"
+          - "Quantified positive outcome"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:leadership"
+
+    - id: "qb-univ-beh-007"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you had a conflict with a coworker. How did you resolve it?"
+      context: "This question assesses collaboration and conflict resolution skills."
+      behavioral:
+        competency: "collaboration"
+        star_prompts:
+          situation: "Describe a genuine conflict (not a minor disagreement). What was the nature of the conflict?"
+          task: "What was at stake? What was your role in resolving it?"
+          action: "What specific steps did you take to address the conflict? How did you approach the conversation?"
+          result: "How was it resolved? What was the impact on your working relationship?"
+        sample_answer: |
+          Situation: On my previous team, a senior engineer and I had a significant disagreement about the architecture for a new feature. He wanted to use a microservices approach, while I believed a monolithic solution would ship faster and be easier to maintain at our scale. The disagreement was creating tension and blocking the project.
+
+          Task: As the feature lead, I needed to resolve the conflict quickly while maintaining a good working relationship. We couldn't afford to lose either perspective or let the project stall.
+
+          Action: I asked him to grab coffee away from the team to discuss. I started by genuinely trying to understand his concerns—it turned out he'd been burned by monolithic technical debt at a previous company. I acknowledged his experience and shared my reasoning about our current scale. I proposed we create a decision matrix together, evaluating both approaches against our actual constraints. We agreed on objective criteria: time to market, maintenance burden, and ability to scale if needed.
+
+          Result: The framework showed that a modular monolith with clear boundaries addressed both our concerns. He appreciated that I'd taken time to understand his perspective rather than just pushing my view. We ended up with a better architecture than either original proposal, and we've collaborated smoothly since then.
+        evaluation_criteria:
+          - "Genuine conflict (not superficial disagreement)"
+          - "Empathy and effort to understand other perspective"
+          - "Professional approach focused on issues not personalities"
+          - "Constructive resolution with maintained/improved relationship"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:collaboration"
+        - "skill:communication"
+
+    - id: "qb-univ-beh-008"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a time you failed. What did you learn?"
+      context: "This question assesses self-awareness, resilience, and growth mindset."
+      behavioral:
+        competency: "adaptability"
+        star_prompts:
+          situation: "Describe a genuine failure (not a 'humble brag' disguised as failure)."
+          task: "What were you trying to accomplish? What was at stake?"
+          action: "What happened? What decisions or actions led to the failure?"
+          result: "What was the impact? What did you learn? How have you applied that learning?"
+        sample_answer: |
+          Situation: Early in my career, I was responsible for launching a feature that I thought was fully tested. I was eager to ship and skipped some of the manual testing steps I'd planned because automated tests were passing.
+
+          Task: I owned the feature end-to-end, including quality assurance before release. We had committed to a launch date with the marketing team.
+
+          Action: I pushed to production on Thursday afternoon. Within hours, we started getting customer complaints about a critical bug in an edge case my automated tests didn't cover. The bug affected about 5% of users but included some of our largest customers. I had to work through the weekend to fix it and personally emailed affected customers to apologize.
+
+          Result: We lost one mid-sized customer who was already considering alternatives. More importantly, I damaged my team's trust and our relationship with marketing. The learning that stuck with me: automated tests are necessary but not sufficient, and never ship before a weekend. Since then, I've built proper testing checklists and established a 'no Friday deploys' norm on teams I've led. I've shared this story with junior engineers to help them avoid the same mistake.
+        evaluation_criteria:
+          - "Genuine failure with real consequences"
+          - "Honest accountability (not blaming others)"
+          - "Specific learning extracted from the experience"
+          - "Evidence of applying the learning going forward"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:adaptability"
+        - "skill:problem-solving"
+
+    - id: "qb-univ-beh-009"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Tell me about a complex problem you solved."
+      context: "This question assesses analytical thinking and problem-solving approach."
+      behavioral:
+        competency: "problem-solving"
+        star_prompts:
+          situation: "What made this problem complex? What was the context?"
+          task: "What was your specific responsibility in solving it?"
+          action: "How did you approach the problem? What steps did you take? How did you evaluate options?"
+          result: "What was the solution? What was the impact?"
+        sample_answer: |
+          Situation: Our e-commerce platform was experiencing intermittent slowdowns that were costing us an estimated $50K per month in abandoned carts. The issue had been occurring for three months but no one had been able to diagnose the root cause. It only happened during peak traffic and wasn't reproducible in our test environment.
+
+          Task: I was asked to lead the investigation and find a fix. I had two weeks before our biggest sale of the year, when the problem would be most damaging.
+
+          Action: I started by gathering data—I pulled metrics from the past 90 days and correlated slowdowns with various factors. I noticed the issues clustered around specific times that didn't match our expected traffic peaks. I hypothesized it might be related to background jobs, so I analyzed our job scheduler logs. I found that our recommendation engine's batch jobs were coinciding with traffic spikes. The jobs were configured for off-peak hours, but someone had changed the timezone setting months ago without documenting it. I tested my hypothesis by temporarily disabling the jobs during a busy period—performance normalized.
+
+          Result: The fix was a one-line configuration change. Response times during peak hours improved by 60%, and we saw a 12% reduction in cart abandonment. I documented the root cause and implemented monitoring to alert if similar job/traffic conflicts occurred in the future.
+        evaluation_criteria:
+          - "Genuinely complex problem (not trivial)"
+          - "Systematic approach to investigation"
+          - "Clear reasoning and hypothesis testing"
+          - "Quantified impact of solution"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:problem-solving"
+
+    - id: "qb-univ-beh-010"
+      type: "behavioral"
+      section_ref: "common-questions"
+      question_text: "Describe a time when you had to persuade someone to see things your way."
+      context: "This question assesses communication and influence skills."
+      behavioral:
+        competency: "communication"
+        star_prompts:
+          situation: "What was the context? Who were you trying to persuade and why were they resistant?"
+          task: "What outcome were you trying to achieve? Why did it matter?"
+          action: "How did you approach the persuasion? What techniques or arguments did you use?"
+          result: "Were you successful? What was the outcome?"
+        sample_answer: |
+          Situation: My team wanted to adopt a new testing framework that would improve our development speed, but our engineering director was skeptical. He'd seen previous tool adoptions fail and was concerned about the learning curve disrupting our deliverables.
+
+          Task: I needed to convince him to approve a trial period for the new framework. We couldn't adopt it without his support, and the team was frustrated with our current tooling.
+
+          Action: First, I made sure I understood his concerns—I scheduled a 1:1 and asked open-ended questions about his previous experiences with tool adoptions. I learned his main worry was productivity dropping for 2-3 months during transition. Armed with this insight, I proposed a low-risk pilot: one team, one quarter, with clear success metrics. I created a rollback plan showing exactly how we'd revert if metrics declined. I also found two case studies from similar-sized companies who had adopted the framework successfully. Finally, I offered to personally own the pilot and check in with him weekly.
+
+          Result: He approved the pilot. After 6 weeks, our test coverage increased 25% with no productivity loss. He not only approved full adoption but cited our structured approach when proposing other changes to leadership. The experience taught me that understanding someone's underlying concerns is more effective than arguing about surface-level objections.
+        evaluation_criteria:
+          - "Clear understanding of the other person's perspective"
+          - "Strategic approach (not just persistent arguing)"
+          - "Evidence of adapting approach based on their concerns"
+          - "Respectful influence (not manipulation)"
+      difficulty: "intermediate"
+      estimated_time_minutes: 3
+      frequency: "high"
+      companies:
+        - "all"
+      tags:
+        - "interview:behavioral"
+        - "skill:communication"
+        - "skill:leadership"
+
+    # =========================================================================
+    # Module Assessment Questions (Section 8)
+    # =========================================================================
+
+    - id: "qb-univ-beh-011"
+      type: "multiple_choice"
+      section_ref: "final-assessment"
+      question_text: "A behavioral interview question typically starts with which phrase?"
+      options:
+        - "What would you do if..."
+        - "Tell me about a time when..."
+        - "In theory, how should..."
+        - "What do you think about..."
+      correct_answer: 1
+      explanation: "Behavioral questions ask about past experiences ('Tell me about a time...') rather than hypothetical scenarios ('What would you do if...'). The underlying principle is that past behavior predicts future behavior."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-012"
+      type: "multiple_choice"
+      section_ref: "final-assessment"
+      question_text: "Which statement about the 'failure' question is TRUE?"
+      options:
+        - "Choose a minor failure to minimize looking bad"
+        - "Blame external circumstances to show self-awareness"
+        - "Discuss a genuine failure and what you learned from it"
+        - "Explain that you've never really failed at anything important"
+      correct_answer: 2
+      explanation: "Failure questions test self-awareness and growth mindset. A genuine failure with clear learnings demonstrates maturity. Minor failures or deflecting blame suggest lack of self-awareness; claiming no failures suggests inexperience or arrogance."
+      difficulty: "intermediate"
+      competencies:
+        - "skill:adaptability"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-013"
+      type: "multiple_choice"
+      section_ref: "final-assessment"
+      question_text: "How many prepared stories should a well-prepared story bank contain?"
+      options:
+        - "2-3 stories"
+        - "5-6 stories"
+        - "8-12 stories"
+        - "20+ stories (one per possible question)"
+      correct_answer: 2
+      explanation: "A well-rounded story bank contains 8-12 versatile stories covering all major competencies. This provides enough variety while remaining manageable to practice. Each story should be adaptable to multiple question types."
+      difficulty: "beginner"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-014"
+      type: "multiple_choice"
+      section_ref: "final-assessment"
+      question_text: "When answering a conflict question, you should:"
+      options:
+        - "Explain why the other person was wrong"
+        - "Show empathy for the other perspective and focus on resolution"
+        - "Describe how you avoided the conflict entirely"
+        - "Demonstrate that you won the argument"
+      correct_answer: 1
+      explanation: "Conflict questions assess your ability to navigate interpersonal challenges professionally. Showing empathy, focusing on shared goals, and achieving constructive resolution demonstrates collaboration and communication skills."
+      difficulty: "intermediate"
+      competencies:
+        - "skill:collaboration"
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"
+
+    - id: "qb-univ-beh-015"
+      type: "multiple_choice"
+      section_ref: "final-assessment"
+      question_text: "Which of these is a 'power phrase' that strengthens behavioral answers?"
+      options:
+        - "I think it sort of worked out"
+        - "We kind of decided to try something"
+        - "I identified three options and recommended the second based on..."
+        - "I guess it was a pretty good result"
+      correct_answer: 2
+      explanation: "Power phrases are specific and confident. 'I identified three options and recommended...' shows clear thinking and ownership. Hedging words ('kind of,' 'I think,' 'I guess') undermine credibility and suggest lack of confidence."
+      difficulty: "intermediate"
+      competencies:
+        - "skill:communication"
+      tags:
+        - "interview:behavioral"
+        - "format:practice"

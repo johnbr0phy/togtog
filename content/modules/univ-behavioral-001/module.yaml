@@ -1,0 +1,271 @@
+# =============================================================================
+# Universal Behavioral Interview Prep Module
+# =============================================================================
+# This module provides foundational behavioral interview preparation applicable
+# across all companies, industries, and roles. It serves as a prerequisite for
+# company-specific and role-specific behavioral modules.
+# =============================================================================
+
+module:
+  # === METADATA ===
+  id: "univ-behavioral-001"
+  version: "1.0.0"
+  created_at: "2025-01-16T00:00:00Z"
+  updated_at: "2025-01-16T00:00:00Z"
+  author: "Content Team"
+  status: "published"
+
+  # === CLASSIFICATION ===
+  type: "universal"
+  title: "Behavioral Interview Fundamentals"
+  slug: "behavioral-interview-fundamentals"
+  description: "Master the STAR method and essential behavioral interview techniques used by every major company."
+  long_description: |
+    This comprehensive module teaches you the foundational skills needed to excel
+    in behavioral interviews. You'll learn the proven STAR method for structuring
+    compelling stories, understand what interviewers are really evaluating, and
+    practice with questions from real interviews at top companies. Whether you're
+    preparing for your first interview or a senior leadership role, these
+    fundamentals will serve as your foundation for success.
+
+  # === TARGET AUDIENCE ===
+  audience:
+    companies: []  # Universal - applies to all
+    industries: []  # Universal - applies to all
+    role_families: []  # Universal - applies to all
+    roles: []  # Universal - applies to all
+    experience_levels:
+      - "entry"
+      - "mid"
+      - "senior"
+      - "staff"
+      - "principal"
+      - "executive"
+    skill_prerequisites: []  # No prerequisites - entry point module
+
+  # === TIMING ===
+  timing:
+    estimated_completion_minutes: 90
+    recommended_pace: "self_paced"
+    validity_period_days: 365  # Review annually for best practices updates
+
+  # === CONTENT STRUCTURE ===
+  sections:
+    - id: "intro"
+      title: "Introduction to Behavioral Interviews"
+      type: "lesson"
+      order: 1
+      estimated_minutes: 10
+      content:
+        format: "text"
+        text:
+          body_file: "sections/01-intro.md"
+          key_takeaways:
+            - "Behavioral interviews assess past behavior to predict future performance"
+            - "Every major company uses behavioral questions in some form"
+            - "Preparation and practice are the keys to success"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "star-method"
+      title: "The STAR Method Explained"
+      type: "lesson"
+      order: 2
+      estimated_minutes: 15
+      content:
+        format: "text"
+        text:
+          body_file: "sections/02-star-method.md"
+          key_takeaways:
+            - "STAR stands for Situation, Task, Action, Result"
+            - "Spend 70% of your answer on Action and Result"
+            - "Quantify results whenever possible"
+            - "Keep total response time to 2-3 minutes"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "star-practice"
+      title: "STAR Method Practice"
+      type: "practice"
+      order: 3
+      estimated_minutes: 15
+      content:
+        format: "interactive"
+        interactive:
+          type: "quiz"
+          config:
+            question_count: 5
+            randomize: true
+            show_feedback: true
+      practice_questions:
+        - "qb-univ-beh-001"
+        - "qb-univ-beh-002"
+        - "qb-univ-beh-003"
+        - "qb-univ-beh-004"
+        - "qb-univ-beh-005"
+      completion_criteria:
+        type: "quiz_score"
+        threshold: 0.6
+
+    - id: "competency-categories"
+      title: "Core Competency Categories"
+      type: "lesson"
+      order: 4
+      estimated_minutes: 15
+      content:
+        format: "text"
+        text:
+          body_file: "sections/04-competencies.md"
+          key_takeaways:
+            - "Leadership questions assess influence and decision-making"
+            - "Collaboration questions evaluate teamwork and communication"
+            - "Problem-solving questions test analytical thinking"
+            - "Adaptability questions measure resilience and learning"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "story-bank"
+      title: "Building Your Story Bank"
+      type: "lesson"
+      order: 5
+      estimated_minutes: 15
+      content:
+        format: "mixed"
+        text:
+          body_file: "sections/05-story-bank.md"
+          key_takeaways:
+            - "Prepare 8-12 versatile stories covering major competencies"
+            - "Each story should be adaptable to multiple question types"
+            - "Include both successes and learning experiences"
+            - "Update your story bank as you gain new experiences"
+        interactive:
+          type: "template"
+          config:
+            template_id: "story-bank-worksheet"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "common-questions"
+      title: "Top 20 Behavioral Questions"
+      type: "lesson"
+      order: 6
+      estimated_minutes: 10
+      content:
+        format: "text"
+        text:
+          body_file: "sections/06-common-questions.md"
+          key_takeaways:
+            - "'Tell me about yourself' is a behavioral question in disguise"
+            - "Conflict and failure questions are opportunities, not traps"
+            - "Always have a question ready for 'Why this company?'"
+      practice_questions:
+        - "qb-univ-beh-006"
+        - "qb-univ-beh-007"
+        - "qb-univ-beh-008"
+        - "qb-univ-beh-009"
+        - "qb-univ-beh-010"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "delivery-tips"
+      title: "Delivery and Presentation"
+      type: "lesson"
+      order: 7
+      estimated_minutes: 10
+      content:
+        format: "mixed"
+        text:
+          body_file: "sections/07-delivery.md"
+          key_takeaways:
+            - "Maintain eye contact and positive body language"
+            - "Speak at a measured pace - rushing signals nervousness"
+            - "It's okay to pause briefly to collect your thoughts"
+            - "Show enthusiasm without being over-the-top"
+        video:
+          placeholder: true
+          planned_topics:
+            - "Demonstrating confident body language"
+            - "Pacing and pausing effectively"
+            - "Handling nerves during the interview"
+          estimated_duration_minutes: 8
+          production_priority: "high"
+      completion_criteria:
+        type: "view"
+        threshold: 1
+
+    - id: "final-assessment"
+      title: "Module Assessment"
+      type: "assessment"
+      order: 8
+      estimated_minutes: 10
+      content:
+        format: "interactive"
+        interactive:
+          type: "quiz"
+          config:
+            question_count: 10
+            randomize: true
+            show_feedback: false
+            time_limit_minutes: 15
+      completion_criteria:
+        type: "quiz_score"
+        threshold: 0.7
+
+  # === ASSESSMENT ===
+  question_bank_refs:
+    - "qb-univ-behavioral"
+  assessment:
+    pre_assessment_id: null  # No diagnostic for foundational module
+    post_assessment_id: "assess-univ-beh-final"
+    passing_threshold: 0.7
+
+  # === RELATIONSHIPS ===
+  dependencies:
+    required: []  # No prerequisites - entry point module
+    recommended: []
+    unlocks:
+      - "univ-communication-001"
+      - "company-amazon-lp-001"
+      - "company-google-behavioral-001"
+      - "company-meta-behavioral-001"
+      - "company-microsoft-behavioral-001"
+      - "role-em-behavioral-001"
+
+  # === TAGS ===
+  tags:
+    companies: []  # Universal
+    industries: []  # Universal
+    role_families: []  # Universal
+    skill_types:
+      - "skill:communication"
+      - "skill:problem-solving"
+      - "skill:leadership"
+      - "skill:collaboration"
+    interview_types:
+      - "interview:behavioral"
+      - "interview:culture-fit"
+      - "interview:hiring-manager"
+    difficulty: "beginner"
+    content_format:
+      - "format:text"
+      - "format:interactive"
+      - "format:practice"
+      - "format:template"
+
+  # === SEO & DISCOVERY ===
+  seo:
+    primary_keyword: "behavioral interview questions"
+    secondary_keywords:
+      - "STAR method"
+      - "behavioral interview tips"
+      - "behavioral interview examples"
+      - "how to answer behavioral questions"
+      - "tell me about a time"
+      - "interview storytelling"
+    meta_description: "Master behavioral interviews with the proven STAR method. Learn to craft compelling stories and confidently answer any behavioral question at top companies."
+    search_volume_tier: "tier_1"  # High search volume topic
