@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import QuestionCard from './QuestionCard';
 import { Question } from '../lib/types';
 
@@ -99,17 +100,18 @@ export default function QuestionsSection({ questions, companyName }: QuestionsSe
             evaluation criteria, and expert tips for your {companyName} interview.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#pricing"
+            <Link
+              href="/dashboard"
               className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
-              Unlock Full Access
-            </a>
-            <button
+              Try Full Dashboard
+            </Link>
+            <a
+              href="#pricing"
               className="inline-block px-8 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
             >
-              Get Free Sample PDF
-            </button>
+              View Pricing
+            </a>
           </div>
         </div>
 
