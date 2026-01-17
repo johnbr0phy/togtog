@@ -269,7 +269,7 @@ export default function StagePageClient({ slug }: StagePageClientProps) {
         <div className="max-w-6xl mx-auto px-4 py-6">
           <Link
             href="/my-prep"
-            className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 mb-4"
+            className="inline-flex items-center text-sm text-gray-700 hover:text-blue-600 mb-4"
           >
             <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
