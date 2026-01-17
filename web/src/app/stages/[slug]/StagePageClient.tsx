@@ -354,7 +354,7 @@ export default function StagePageClient({ slug }: StagePageClientProps) {
               onView={() => handleSectionView(SECTION_IDS.overview)}
               defaultOpen={true}
             >
-              <div className="prose prose-gray max-w-none">
+              <div className="prose max-w-none text-gray-800">
                 {stage.overview ? (
                   <p>{stage.overview}</p>
                 ) : (
@@ -385,7 +385,7 @@ export default function StagePageClient({ slug }: StagePageClientProps) {
               isViewed={sectionsViewed.includes(SECTION_IDS.hiddenIntent)}
               onView={() => handleSectionView(SECTION_IDS.hiddenIntent)}
             >
-              <div className="prose prose-gray max-w-none">
+              <div className="prose max-w-none text-gray-800">
                 {stage.hiddenIntent ? (
                   <>
                     <p className="text-lg font-medium text-gray-900 mb-4">{stage.hiddenIntent}</p>
