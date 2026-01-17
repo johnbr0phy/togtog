@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-2, 8-10 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-3, 8-10 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -12,7 +12,7 @@
 |-------|-------------|--------|
 | 1 | Verify Search Volume Analysis (R1) | **Complete** |
 | 2 | Hiring Push Identification (R2) | **Complete** |
-| 3 | AI Marketing Copy - Prompt Template (C3) | Not Started |
+| 3 | AI Marketing Copy - Prompt Template (C3) | **Complete** |
 | 4 | AI Marketing Copy - Sample Outputs (C3) | Not Started |
 | 5 | Question Bank Expansion - Part 1 (C4) | Not Started |
 | 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
@@ -77,15 +77,22 @@
 
 ## Chunk 3: AI Marketing Copy - Prompt Template (C3)
 
-- [ ] Create prompt template accepting: company name, role title, industry, key challenges
-- [ ] Define output format: headline, subheadline, 3 bullets, CTA, meta description
-- [ ] Create style guide for brand voice
-- [ ] Define quality checklist
-- [ ] Document A/B test variants (urgency vs. expertise vs. insider knowledge)
+- [x] Create prompt template accepting: company name, role title, industry, key challenges
+- [x] Define output format: headline, subheadline, 3 bullets, CTA, meta description
+- [x] Create style guide for brand voice
+- [x] Define quality checklist
+- [x] Document A/B test variants (urgency vs. expertise vs. insider knowledge)
 
 **Deliverable:** `docs/marketing/prompt-template.md`
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Master prompt template with 7 input variables
+- 3 A/B test variants: Urgency, Expertise, Insider Knowledge
+- Complete style guide with do/don't examples
+- Quality checklist covering accuracy, brand, technical, legal, SEO
+- 3 example outputs (Google SWE, McKinsey, Amazon SWE)
 
 ---
 
@@ -347,4 +354,5 @@
 | 2026-01-17 | 2 | Created hiring push tracker - 25 companies, 8 recurring events |
 | 2026-01-17 | 8, 9 | Tech stack (Next.js/Vercel/Supabase) + Landing page template |
 | 2026-01-17 | 10 | Deployed to Vercel - 3 live landing pages |
+| 2026-01-17 | 3 | Marketing copy prompt template + style guide + A/B variants |
 
