@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-2 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-2, 8-9 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -17,8 +17,8 @@
 | 5 | Question Bank Expansion - Part 1 (C4) | Not Started |
 | 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
 | 7 | Domain Strategy (M2) | Not Started |
-| 8 | Tech Stack Decision | Not Started |
-| 9 | Landing Page Template (P1) | Not Started |
+| 8 | Tech Stack Decision | **Complete** |
+| 9 | Landing Page Template (P1) | **Complete** |
 | 10 | Deploy Test Positions (P1) | Not Started |
 | 11 | Free Tier Experience (P2) | Not Started |
 | 12 | Payment Integration (P3) | Not Started |
@@ -151,29 +151,42 @@
 
 ## Chunk 8: Tech Stack Decision
 
-- [ ] Decide: Next.js / Plain HTML / Other
-- [ ] Decide: Hosting platform (Vercel / Netlify / Other)
-- [ ] Decide: Database for user data (if any)
+- [x] Decide: Next.js / Plain HTML / Other → **Next.js**
+- [x] Decide: Hosting platform (Vercel / Netlify / Other) → **Vercel**
+- [x] Decide: Database for user data (if any) → **Supabase**
 
 **Deliverable:** Decision documented in this file
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Tech Stack:**
+- **Framework:** Next.js (App Router)
+- **Hosting:** Vercel
+- **Database:** Supabase (PostgreSQL + Auth)
+- **Styling:** Tailwind CSS
 
 ---
 
 ## Chunk 9: Landing Page Template (P1)
 
-- [ ] Create template with dynamic variables (company, role, logo)
-- [ ] Include sections: Hero, What You'll Learn, Social Proof, Pricing CTA, FAQ
-- [ ] Mobile responsive design
-- [ ] SEO meta tags structure
-- [ ] Define URL structure (subdomain vs. path)
+- [x] Create template with dynamic variables (company, role, logo)
+- [x] Include sections: Hero, What You'll Learn, Social Proof, Pricing CTA, FAQ
+- [x] Mobile responsive design (Tailwind responsive classes)
+- [x] SEO meta tags structure (generateMetadata)
+- [x] Define URL structure → Path-based: `/prep/[slug]`
 
 **Deliverable:** Working landing page template
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 8
+
+**Summary:**
+- Next.js app created in `/web` directory
+- Dynamic route at `/prep/[slug]` for landing pages
+- 5 components: HeroSection, ModulesSection, SocialProofSection, PricingSection, FAQSection
+- 3 sample positions: Google SWE, Amazon SWE, McKinsey Consultant
+- Build successful, static pages pre-rendered
 
 ---
 
@@ -326,4 +339,5 @@
 | 2026-01-17 | - | Created implementation plan |
 | 2026-01-17 | 1 | Verified R1 Excel - all acceptance criteria met |
 | 2026-01-17 | 2 | Created hiring push tracker - 25 companies, 8 recurring events |
+| 2026-01-17 | 8, 9 | Tech stack (Next.js/Vercel/Supabase) + Landing page template |
 
