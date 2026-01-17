@@ -114,7 +114,7 @@ export default function SetPieceCard({ piece, onDelete }: SetPieceCardProps) {
           {/* Actions */}
           <div className="px-4 pb-4 flex items-center justify-between">
             <Link
-              href={`/set-pieces/edit/${piece.id}`}
+              href={`/set-pieces/new?edit=${piece.id}`}
               className="text-sm font-medium text-blue-600 hover:text-blue-700"
             >
               Edit Story
