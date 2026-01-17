@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-4, 8-10 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-5, 8-10 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -14,7 +14,7 @@
 | 2 | Hiring Push Identification (R2) | **Complete** |
 | 3 | AI Marketing Copy - Prompt Template (C3) | **Complete** |
 | 4 | AI Marketing Copy - Sample Outputs (C3) | **Complete** |
-| 5 | Question Bank Expansion - Part 1 (C4) | Not Started |
+| 5 | Question Bank Expansion - Part 1 (C4) | **Complete** |
 | 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
 | 7 | Domain Strategy (M2) | Not Started |
 | 8 | Tech Stack Decision | **Complete** |
@@ -119,14 +119,19 @@
 
 ## Chunk 5: Question Bank Expansion - Part 1 (C4)
 
-- [ ] Add 10 behavioral questions (STAR format)
-- [ ] Add 10 technical questions
-- [ ] Include for each: question text, category, difficulty, tags, sample answer, framework, common mistakes, source
-- [ ] Tag questions with applicable modules
+- [x] Add 10 behavioral questions (STAR format)
+- [x] Add 10 technical questions
+- [x] Include for each: question text, category, difficulty, tags, sample answer, framework, common mistakes, source
+- [x] Tag questions with applicable modules
 
 **Deliverable:** Updated question bank (35 total questions)
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Added 10 behavioral questions (decision-making, going above & beyond, feedback, stakeholders, learning, prioritization, problem identification, mentoring, pushing back, adapting to change)
+- Added 10 technical questions (hash tables, stacks, processes/threads, DB indexes, REST APIs, load balancers, SQL/NoSQL, Big O, deadlocks, caching)
+- All questions include full metadata, sample answers, and evaluation criteria
 
 ---
 
@@ -361,4 +366,5 @@
 | 2026-01-17 | 10 | Deployed to Vercel - 3 live landing pages |
 | 2026-01-17 | 3 | Marketing copy prompt template + style guide + A/B variants |
 | 2026-01-17 | 4 | Generated 10 validated sample outputs for landing pages |
+| 2026-01-17 | 5 | Added 20 questions (10 behavioral, 10 technical) - now 35 total |
 
