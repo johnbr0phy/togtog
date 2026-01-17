@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-6, 8-10 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-10 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -16,7 +16,7 @@
 | 4 | AI Marketing Copy - Sample Outputs (C3) | **Complete** |
 | 5 | Question Bank Expansion - Part 1 (C4) | **Complete** |
 | 6 | Question Bank Expansion - Part 2 (C4) | **Complete** |
-| 7 | Domain Strategy (M2) | Not Started |
+| 7 | Domain Strategy (M2) | **Complete** |
 | 8 | Tech Stack Decision | **Complete** |
 | 9 | Landing Page Template (P1) | **Complete** |
 | 10 | Deploy Test Positions (P1) | **Complete** |
@@ -163,16 +163,24 @@
 
 ## Chunk 7: Domain Strategy (M2)
 
-- [ ] Evaluate: separate domains vs. subdomains vs. path-based
-- [ ] Document pros/cons (SEO, cost, management)
-- [ ] Make recommendation
-- [ ] Plan for 5 test domains/URLs
-- [ ] Define SSL requirements
-- [ ] Define redirect logic for future consolidation
+- [x] Evaluate: separate domains vs. subdomains vs. path-based
+- [x] Document pros/cons (SEO, cost, management)
+- [x] Make recommendation
+- [x] Plan for 5 test domains/URLs
+- [x] Define SSL requirements
+- [x] Define redirect logic for future consolidation
 
 **Deliverable:** `docs/marketing/domain-strategy.md`
 
-**Status:** Not Started
+**Status:** **Complete**
+
+**Summary:**
+- Evaluated 3 options: separate domains, subdomains, path-based
+- **Recommendation: Path-based** (`togtog.com/prep/[slug]`) - best SEO equity, lowest cost, simplest management
+- Cost analysis: Path-based saves ~$2,000/year vs separate domains
+- 5 test URLs documented (3 live, 2 planned)
+- SSL handled by Vercel (automatic), HSTS configuration provided
+- Redirect strategy defined for company rebrands, URL restructures, position consolidation
 
 ---
 
@@ -378,4 +386,5 @@
 | 2026-01-17 | 4 | Generated 10 validated sample outputs for landing pages |
 | 2026-01-17 | 5 | Added 20 questions (10 behavioral, 10 technical) - now 35 total |
 | 2026-01-17 | 6 | Added 25 questions (5 case, 5 situational, 5 culture, 10 company-specific) - now 60 total |
+| 2026-01-17 | 7 | Domain strategy - path-based recommended, SSL/redirect requirements defined |
 
