@@ -2,25 +2,36 @@
 
 > **Last Updated:** 2026-01-17
 >
-> This document tracks our phased approach to completing the Interview Prep Website. Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
+> Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
 ---
 
 ## Progress Overview
 
-| Phase | Description | Status |
+| Chunk | Description | Status |
 |-------|-------------|--------|
-| Phase A | Research Foundation | Not Started |
-| Phase B | Content System | Not Started |
-| Phase C | Platform MVP | Not Started |
-| Phase D | Marketing Setup | Not Started |
-| Phase E | Future Enhancements | Deferred |
+| 1 | Verify Search Volume Analysis (R1) | Not Started |
+| 2 | Hiring Push Identification (R2) | Not Started |
+| 3 | AI Marketing Copy - Prompt Template (C3) | Not Started |
+| 4 | AI Marketing Copy - Sample Outputs (C3) | Not Started |
+| 5 | Question Bank Expansion - Part 1 (C4) | Not Started |
+| 6 | Question Bank Expansion - Part 2 (C4) | Not Started |
+| 7 | Domain Strategy (M2) | Not Started |
+| 8 | Tech Stack Decision | Not Started |
+| 9 | Landing Page Template (P1) | Not Started |
+| 10 | Deploy Test Positions (P1) | Not Started |
+| 11 | Free Tier Experience (P2) | Not Started |
+| 12 | Payment Integration (P3) | Not Started |
+| 13 | Premium Content Delivery (P4) | Not Started |
+| 14 | Google Ads Campaign Structure (M1) | Not Started |
+| 15 | Analytics Requirements (M3) | Not Started |
+| 16 | Voice Mock Interview Feasibility (F1) | Deferred |
+| 17 | Expert Contributor Program (F2) | Deferred |
 
 ---
 
-## Phase A: Complete Research Foundation
+## Chunk 1: Verify Search Volume Analysis (R1)
 
-### A1: Verify Search Volume Analysis (R1)
 - [ ] Review `interview_landing_page_analysis.xlsx`
 - [ ] Confirm 100+ company/role combinations exist
 - [ ] Verify monthly search volume, CPC, competition data present
@@ -35,94 +46,109 @@
 
 ---
 
-### A2: Hiring Push Identification (R2)
+## Chunk 2: Hiring Push Identification (R2)
+
 - [ ] Research companies with 1000+ active roles
 - [ ] Document: company name, role types, geographic focus, timeline, source link
 - [ ] Cross-reference with R1 search data
 - [ ] Identify 20+ companies with active pushes
 - [ ] Flag recurring annual hiring events
 - [ ] Create priority score for each
-- [ ] Output tracker file
 
-**Deliverable:** `data/hiring_push_tracker.md` with 20+ companies
+**Deliverable:** `data/hiring_push_tracker.md`
 
 **Status:** Not Started
 
 ---
 
-## Phase B: Complete Content System
+## Chunk 3: AI Marketing Copy - Prompt Template (C3)
 
-### B1: AI Marketing Copy - Prompt Template (C3)
 - [ ] Create prompt template accepting: company name, role title, industry, key challenges
 - [ ] Define output format: headline, subheadline, 3 bullets, CTA, meta description
 - [ ] Create style guide for brand voice
 - [ ] Define quality checklist
 - [ ] Document A/B test variants (urgency vs. expertise vs. insider knowledge)
 
-**Deliverable:** `docs/marketing/prompt-template.md` with template + style guide
+**Deliverable:** `docs/marketing/prompt-template.md`
 
 **Status:** Not Started
 
-**Depends On:** None
-
 ---
 
-### B2: AI Marketing Copy - Sample Outputs (C3)
-- [ ] Generate 10 sample outputs using template from B1
+## Chunk 4: AI Marketing Copy - Sample Outputs (C3)
+
+- [ ] Generate 10 sample outputs using template from Chunk 3
 - [ ] Validate tone and accuracy for each
 - [ ] Ensure no hallucinated facts
 - [ ] Verify consistent brand voice
 - [ ] Document which A/B variant each sample represents
 
-**Deliverable:** `docs/marketing/sample-outputs.md` with 10 validated samples
+**Deliverable:** `docs/marketing/sample-outputs.md`
 
 **Status:** Not Started
 
-**Depends On:** B1
+**Depends On:** Chunk 3
 
 ---
 
-### B3: Question Bank Expansion - Part 1 (C4)
+## Chunk 5: Question Bank Expansion - Part 1 (C4)
+
 - [ ] Add 10 behavioral questions (STAR format)
 - [ ] Add 10 technical questions
 - [ ] Include for each: question text, category, difficulty, tags, sample answer, framework, common mistakes, source
 - [ ] Tag questions with applicable modules
 
-**Deliverable:** Updated `content/modules/univ-behavioral-001/question_bank.yaml` (35 total questions)
+**Deliverable:** Updated question bank (35 total questions)
 
 **Status:** Not Started
 
-**Depends On:** None
-
 ---
 
-### B4: Question Bank Expansion - Part 2 (C4)
+## Chunk 6: Question Bank Expansion - Part 2 (C4)
+
 - [ ] Add 5 case study questions
 - [ ] Add 5 situational questions
 - [ ] Add 5 culture fit questions
 - [ ] Add 10 company-specific questions (top 3 target companies)
 - [ ] Ensure 50+ total questions reached
 
-**Deliverable:** Complete question bank with 50+ entries (may need new file for company-specific)
+**Deliverable:** Complete question bank with 50+ entries
 
 **Status:** Not Started
 
-**Depends On:** B3
+**Depends On:** Chunk 5
 
 ---
 
-## Phase C: Platform MVP
+## Chunk 7: Domain Strategy (M2)
 
-> **Blocked:** Requires tech stack decision before starting
+- [ ] Evaluate: separate domains vs. subdomains vs. path-based
+- [ ] Document pros/cons (SEO, cost, management)
+- [ ] Make recommendation
+- [ ] Plan for 5 test domains/URLs
+- [ ] Define SSL requirements
+- [ ] Define redirect logic for future consolidation
 
-### Tech Stack Decision (Required)
+**Deliverable:** `docs/marketing/domain-strategy.md`
+
+**Status:** Not Started
+
+---
+
+## Chunk 8: Tech Stack Decision
+
 - [ ] Decide: Next.js / Plain HTML / Other
 - [ ] Decide: Hosting platform (Vercel / Netlify / Other)
 - [ ] Decide: Database for user data (if any)
 
+**Deliverable:** Decision documented in this file
+
+**Status:** Not Started
+
 ---
 
-### C1: Landing Page Template (P1)
+## Chunk 9: Landing Page Template (P1)
+
 - [ ] Create template with dynamic variables (company, role, logo)
 - [ ] Include sections: Hero, What You'll Learn, Social Proof, Pricing CTA, FAQ
 - [ ] Mobile responsive design
@@ -133,11 +159,12 @@
 
 **Status:** Not Started
 
-**Depends On:** Tech Stack Decision
+**Depends On:** Chunk 8
 
 ---
 
-### C2: Deploy Test Positions (P1)
+## Chunk 10: Deploy Test Positions (P1)
+
 - [ ] Deploy landing page for Position 1
 - [ ] Deploy landing page for Position 2
 - [ ] Deploy landing page for Position 3
@@ -148,11 +175,12 @@
 
 **Status:** Not Started
 
-**Depends On:** C1
+**Depends On:** Chunk 9
 
 ---
 
-### C3: Free Tier Experience (P2)
+## Chunk 11: Free Tier Experience (P2)
+
 - [ ] Display 5-10 free questions without login
 - [ ] Show question text, category badge, difficulty
 - [ ] Implement answer blur/fade behind paywall
@@ -164,11 +192,12 @@
 
 **Status:** Not Started
 
-**Depends On:** C2
+**Depends On:** Chunk 10
 
 ---
 
-### C4: Payment Integration (P3)
+## Chunk 12: Payment Integration (P3)
+
 - [ ] Stripe Checkout integration
 - [ ] Configure $197 price point (test mode)
 - [ ] Payment flow: select → email → pay → confirm → access
@@ -181,11 +210,12 @@
 
 **Status:** Not Started
 
-**Depends On:** C2
+**Depends On:** Chunk 10
 
 ---
 
-### C5: Premium Content Delivery (P4)
+## Chunk 13: Premium Content Delivery (P4)
+
 - [ ] Magic link authentication (no password)
 - [ ] Dashboard: purchased position, module list, progress
 - [ ] Module view with completion checkboxes
@@ -197,34 +227,17 @@
 
 **Status:** Not Started
 
-**Depends On:** C4
+**Depends On:** Chunk 12
 
 ---
 
-## Phase D: Marketing Setup
+## Chunk 14: Google Ads Campaign Structure (M1)
 
-### D1: Domain Strategy (M2)
-- [ ] Evaluate: separate domains vs. subdomains vs. path-based
-- [ ] Document pros/cons (SEO, cost, management)
-- [ ] Make recommendation
-- [ ] Plan for 5 test domains/URLs
-- [ ] Define SSL requirements
-- [ ] Define redirect logic for future consolidation
-
-**Deliverable:** `docs/marketing/domain-strategy.md`
-
-**Status:** Not Started
-
-**Depends On:** None
-
----
-
-### D2: Google Ads Campaign Structure (M1)
 - [ ] Define campaign structure (1 per industry)
 - [ ] Define ad groups (per company/role)
 - [ ] List keywords for 5 positions
 - [ ] Define negative keywords
-- [ ] Create 10 ad copy variations using C3 templates
+- [ ] Create 10 ad copy variations using marketing templates
 - [ ] Set UTM parameters
 - [ ] Define budget caps
 - [ ] Define conversion tracking events
@@ -233,11 +246,12 @@
 
 **Status:** Not Started
 
-**Depends On:** B1, B2
+**Depends On:** Chunk 3, Chunk 4
 
 ---
 
-### D3: Analytics Requirements (M3)
+## Chunk 15: Analytics Requirements (M3)
+
 - [ ] Define metrics per position (impressions, clicks, CTR, CPC, conversions, ROAS)
 - [ ] Design funnel visualization
 - [ ] Define alert thresholds
@@ -248,28 +262,26 @@
 
 **Status:** Not Started
 
-**Depends On:** D2
+**Depends On:** Chunk 14
 
 ---
 
-## Phase E: Future Enhancements (Deferred)
+## Chunk 16: Voice Mock Interview Feasibility (F1)
 
-### E1: Voice Mock Interview Feasibility (F1)
 - [ ] Research Sesame.ai capabilities
 - [ ] Evaluate alternatives (ElevenLabs, PlayHT, OpenAI)
 - [ ] Define MVP voice experience
 - [ ] Technical feasibility assessment
 - [ ] Cost model per session
 
-**Deliverable:** Feasibility report with recommendation
+**Deliverable:** Feasibility report
 
 **Status:** Deferred
 
-**Depends On:** Platform live
-
 ---
 
-### E2: Expert Contributor Program (F2)
+## Chunk 17: Expert Contributor Program (F2)
+
 - [ ] Define contributor profile
 - [ ] Design revenue share model
 - [ ] Draft contributor agreement
@@ -280,28 +292,16 @@
 
 **Status:** Deferred
 
-**Depends On:** Content proven
-
----
-
-## Recommended Execution Order
-
-```
-A1 → A2 → B1 → B2 → B3 → B4 → D1 → [Tech Stack Decision] → C1 → C2 → C3 → C4 → C5 → D2 → D3
-```
-
 ---
 
 ## Completed Work (Reference)
 
-The following was completed in previous sessions:
-
-- [x] **R3: Interview Process Mapping** - 10 company/role docs in `docs/interview-processes/`
-- [x] **C1: Module Architecture** - Full spec in `docs/architecture/module-architecture.md`
-- [x] **C2: Position-Module Matrix** - Complete in `data/position_module_matrix.md`
-- [x] **Universal Behavioral Module** - 7 sections in `content/modules/univ-behavioral-001/`
-- [x] **Bundle Generator** - TypeScript implementation in `src/bundle-generator.ts`
-- [x] **User Stories** - Documented in `docs/USER_STORIES.md`
+- [x] **R3: Interview Process Mapping** - `docs/interview-processes/`
+- [x] **C1: Module Architecture** - `docs/architecture/module-architecture.md`
+- [x] **C2: Position-Module Matrix** - `data/position_module_matrix.md`
+- [x] **Universal Behavioral Module** - `content/modules/univ-behavioral-001/`
+- [x] **Bundle Generator** - `src/bundle-generator.ts`
+- [x] **User Stories** - `docs/USER_STORIES.md`
 
 ---
 
