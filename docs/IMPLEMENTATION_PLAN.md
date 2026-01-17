@@ -1,6 +1,6 @@
 # Implementation Plan
 
-> **Last Updated:** 2026-01-17 (Chunks 1-2, 8-9 complete)
+> **Last Updated:** 2026-01-17 (Chunks 1-2, 8-10 complete)
 >
 > Each chunk is a discrete unit of work with a clear deliverable that can be reviewed before moving on.
 
@@ -19,7 +19,7 @@
 | 7 | Domain Strategy (M2) | Not Started |
 | 8 | Tech Stack Decision | **Complete** |
 | 9 | Landing Page Template (P1) | **Complete** |
-| 10 | Deploy Test Positions (P1) | Not Started |
+| 10 | Deploy Test Positions (P1) | **Complete** |
 | 11 | Free Tier Experience (P2) | Not Started |
 | 12 | Payment Integration (P3) | Not Started |
 | 13 | Premium Content Delivery (P4) | Not Started |
@@ -192,17 +192,23 @@
 
 ## Chunk 10: Deploy Test Positions (P1)
 
-- [ ] Deploy landing page for Position 1
-- [ ] Deploy landing page for Position 2
-- [ ] Deploy landing page for Position 3
-- [ ] Verify mobile responsiveness
-- [ ] Test page load speed (<2s on 3G)
+- [x] Deploy landing page for Position 1 (Google SWE)
+- [x] Deploy landing page for Position 2 (Amazon SWE)
+- [x] Deploy landing page for Position 3 (McKinsey Consultant)
+- [x] Verify mobile responsiveness
+- [x] Test page load speed (<2s on 3G)
 
 **Deliverable:** 3 live landing pages
 
-**Status:** Not Started
+**Status:** **Complete**
 
 **Depends On:** Chunk 9
+
+**Live URLs:**
+- Home: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/
+- Google SWE: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/google-software-engineer
+- Amazon SWE: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/amazon-software-engineer
+- McKinsey: https://togtog-fblt7hybv-johnbr0phys-projects.vercel.app/prep/mckinsey-consultant
 
 ---
 
@@ -340,4 +346,5 @@
 | 2026-01-17 | 1 | Verified R1 Excel - all acceptance criteria met |
 | 2026-01-17 | 2 | Created hiring push tracker - 25 companies, 8 recurring events |
 | 2026-01-17 | 8, 9 | Tech stack (Next.js/Vercel/Supabase) + Landing page template |
+| 2026-01-17 | 10 | Deployed to Vercel - 3 live landing pages |
 
