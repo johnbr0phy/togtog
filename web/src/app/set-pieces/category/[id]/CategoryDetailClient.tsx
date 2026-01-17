@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { SET_PIECE_CATEGORIES, SetPiece, SetPieceCategoryInfo } from '../../../../types/v3';
+import { SetPieceCard } from '../../../../components/setpieces';
 
 interface CategoryDetailClientProps {
   categoryId: string;
@@ -139,34 +140,19 @@ export default function CategoryDetailClient({ categoryId }: CategoryDetailClien
           ) : (
             <div className="space-y-4">
               {setPieces.map(piece => (
-                <div
+                <SetPieceCard
                   key={piece.id}
-                  className="bg-white rounded-lg border border-gray-200 overflow-hidden"
-                >
-                  <div className="p-4 flex items-center justify-between">
-                    <div>
-                      <h3 className="font-medium text-gray-900">{piece.title}</h3>
-                      <p className="text-sm text-gray-500">
-                        {piece.wordCount} words • Last edited {new Date(piece.lastEditedAt).toLocaleDateString()}
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {piece.isDraft && (
-                        <span className="text-xs font-medium text-yellow-600 bg-yellow-100 px-2 py-0.5 rounded">
-                          Draft
-                        </span>
-                      )}
-                      <Link
-                        href={`/set-pieces/edit/${piece.id}`}
-                        className="text-gray-500 hover:text-gray-700"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                        </svg>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                  piece={piece}
+                  onDelete={(id) => {
+                    const saved = localStorage.getItem('togtog-setpieces');
+                    if (saved) {
+                      const pieces: SetPiece[] = JSON.parse(saved);
+                      const updated = pieces.filter(p => p.id !== id);
+                      localStorage.setItem('togtog-setpieces', JSON.stringify(updated));
+                      setSetPieces(updated.filter(sp => sp.category === categoryId));
+                    }
+                  }}
+                />
               ))}
             </div>
           )}
