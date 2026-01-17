@@ -11,8 +11,8 @@ export default function MyPrepPage() {
             togtog
           </Link>
           <nav className="flex items-center gap-4">
-            <Link href="/dashboard" className="text-sm text-gray-600 hover:text-gray-900">
-              Question Bank
+            <Link href="/set-pieces" className="text-sm text-gray-600 hover:text-gray-900">
+              Set Pieces
             </Link>
           </nav>
         </div>

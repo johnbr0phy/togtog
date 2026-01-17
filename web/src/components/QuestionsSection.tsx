@@ -101,10 +101,10 @@ export default function QuestionsSection({ questions, companyName }: QuestionsSe
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/dashboard"
+              href="/my-prep"
               className="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
-              Try Full Dashboard
+              Start Your Prep
             </Link>
             <a
               href="#pricing"

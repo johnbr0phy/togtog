@@ -64,10 +64,10 @@ export function PricingSection({ position }: PricingSectionProps) {
                 Secure checkout powered by Stripe
               </p>
               <Link
-                href="/dashboard"
+                href="/my-prep"
                 className="inline-block mt-4 text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors"
               >
-                Try the full dashboard →
+                Start your prep →
               </Link>
             </div>
           </div>
