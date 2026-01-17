@@ -47,6 +47,12 @@ export interface Module {
 export type QuestionType = 'behavioral' | 'technical' | 'case_study' | 'situational' | 'culture_fit' | 'multiple_choice';
 export type Difficulty = 'beginner' | 'intermediate' | 'advanced';
 
+export interface QuestionIntent {
+  hiddenIntent: string;           // What they're really testing (1 sentence)
+  strongAnswersDemonstrate: string[];  // What good answers show
+  weakAnswersReveal: string[];    // What bad answers expose
+}
+
 export interface Question {
   id: string;
   type: QuestionType;
@@ -72,4 +78,7 @@ export interface Question {
 
   // Premium content (blurred in free tier)
   isPremiumAnswer: boolean;
+
+  // Hidden intent (H1)
+  intent?: QuestionIntent;
 }

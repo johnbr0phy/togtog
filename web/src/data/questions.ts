@@ -27,7 +27,22 @@ Result: We completed the migration in 5 weeks with zero downtime. The phased app
       'Evidence of influencing others',
       'Quantified positive outcome'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They want to see if you can influence outcomes and people without relying on formal authority.",
+      strongAnswersDemonstrate: [
+        "Taking initiative without being asked",
+        "Influencing others through persuasion, not mandate",
+        "Making decisions and owning consequences",
+        "Creating structure where none existed"
+      ],
+      weakAnswersReveal: [
+        "Confusing coordination with leadership",
+        "Waiting for permission to act",
+        "Taking credit for team work without showing personal contribution",
+        "Inability to influence without authority"
+      ]
+    }
   },
   {
     id: 'qb-univ-beh-007',
@@ -51,7 +66,22 @@ Result: The framework showed that a modular monolith with clear boundaries addre
       'Professional approach focused on issues not personalities',
       'Constructive resolution with maintained/improved relationship'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They want to see how you handle disagreement without damaging relationships or avoiding necessary conflict.",
+      strongAnswersDemonstrate: [
+        "Separating the person from the problem",
+        "Genuine effort to understand opposing viewpoints",
+        "Finding creative solutions that address multiple concerns",
+        "Maintaining professionalism under emotional pressure"
+      ],
+      weakAnswersReveal: [
+        "Avoiding conflict entirely (I never have conflicts)",
+        "Blaming the other person without self-reflection",
+        "Escalating to management as first response",
+        "Winning the argument but losing the relationship"
+      ]
+    }
   },
   {
     id: 'qb-univ-beh-008',
@@ -75,7 +105,22 @@ Result: We lost one mid-sized customer who was already considering alternatives.
       'Specific learning extracted from the experience',
       'Evidence of applying the learning going forward'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're testing your self-awareness, humility, and ability to learn from mistakes rather than repeat them.",
+      strongAnswersDemonstrate: [
+        "Choosing a real failure with meaningful stakes",
+        "Taking full accountability without excuses",
+        "Extracting specific, actionable lessons",
+        "Showing evidence of changed behavior"
+      ],
+      weakAnswersReveal: [
+        "Disguising a success as a failure (I worked too hard)",
+        "Blaming circumstances or other people",
+        "Superficial learning without behavior change",
+        "Inability to acknowledge personal shortcomings"
+      ]
+    }
   },
 
   // Technical Questions
@@ -131,7 +176,22 @@ Result: We lost one mid-sized customer who was already considering alternatives.
       'Consider temporary mitigations',
       'Balance urgency with sustainability'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're evaluating your judgment, prioritization skills, and whether you can balance urgency with sustainable team practices.",
+      strongAnswersDemonstrate: [
+        "Structured approach to severity assessment",
+        "Creative problem-solving (mitigation strategies)",
+        "Respect for team wellbeing while maintaining accountability",
+        "Clear communication with stakeholders"
+      ],
+      weakAnswersReveal: [
+        "Knee-jerk reactions without assessment",
+        "Ignoring team impact entirely",
+        "Inability to make decisions under pressure",
+        "Either extreme: panic or complacency"
+      ]
+    }
   },
 
   // Company-Specific: Google
@@ -157,7 +217,22 @@ Result: The data showed incremental improvement on high-traffic endpoints would 
       'Data changed the conversation',
       'Clear outcome driven by data'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Google wants to see if you default to evidence over opinion and can use data to persuade others.",
+      strongAnswersDemonstrate: [
+        "Proactively seeking data rather than relying on intuition",
+        "Choosing appropriate metrics and analysis methods",
+        "Using data to align stakeholders rather than just justify positions",
+        "Being willing to change your mind when data contradicts assumptions"
+      ],
+      weakAnswersReveal: [
+        "Cherry-picking data to support existing beliefs",
+        "Analysis paralysis—gathering data but not acting",
+        "Ignoring qualitative signals in favor of easy metrics",
+        "Inability to translate data into actionable decisions"
+      ]
+    }
   },
 
   // Company-Specific: Amazon
@@ -183,7 +258,22 @@ Result: Deployments dropped from 3 hours to 25 minutes. Failure rate went from 2
       'Measurable simplification',
       'Scaled the improvement'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Amazon wants to see if you challenge status quo complexity and relentlessly simplify for customers and teammates.",
+      strongAnswersDemonstrate: [
+        "Questioning 'how things have always been done'",
+        "Measuring complexity and simplification objectively",
+        "Taking action without waiting for permission",
+        "Scaling improvements beyond original scope"
+      ],
+      weakAnswersReveal: [
+        "Accepting unnecessary complexity as inevitable",
+        "Adding complexity in the name of 'best practices'",
+        "Focusing on technical elegance over user impact",
+        "Waiting for others to identify problems"
+      ]
+    }
   },
 
   // Case Study
@@ -214,7 +304,22 @@ Result: Deployments dropped from 3 hours to 25 minutes. Failure rate went from 2
       'Quantifies impact where possible',
       'Provides actionable recommendations'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Consultancies want to see if you can structure ambiguous problems, think commercially, and communicate complex analysis clearly.",
+      strongAnswersDemonstrate: [
+        "Clarifying before diving into analysis",
+        "Using frameworks without being rigid about them",
+        "Quantifying impact and sizing opportunities",
+        "Synthesizing analysis into clear recommendations"
+      ],
+      weakAnswersReveal: [
+        "Jumping to solutions before understanding the problem",
+        "Over-reliance on memorized frameworks",
+        "Inability to handle ambiguity",
+        "Analysis without actionable recommendations"
+      ]
+    }
   },
 
   // Culture Fit
@@ -233,7 +338,22 @@ Result: Deployments dropped from 3 hours to 25 minutes. Failure rate went from 2
       'Honesty (not just telling them what they want to hear)',
       'Specific examples'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're checking if you'll actually fit their environment and whether you're self-aware enough to know what you need.",
+      strongAnswersDemonstrate: [
+        "Genuine self-awareness about work preferences",
+        "Specificity rather than generic answers",
+        "Nuanced understanding (not just 'I'm flexible')",
+        "Evidence of having thrived in described conditions"
+      ],
+      weakAnswersReveal: [
+        "Telling them what you think they want to hear",
+        "Claiming to thrive in any environment",
+        "Lack of self-reflection about work style",
+        "Inability to articulate specific needs"
+      ]
+    }
   },
 
   // Additional STAR Method Questions
@@ -302,7 +422,22 @@ Result: The failover resolved the issue within 5 minutes. Post-incident analysis
       'Appropriate risk assessment',
       'Ownership of the decision regardless of outcome'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They want to see if you can take decisive action under uncertainty without being paralyzed or reckless.",
+      strongAnswersDemonstrate: [
+        "Clear framework for decision-making under uncertainty",
+        "Appropriate risk assessment and mitigation",
+        "Bias toward action with reversible decisions",
+        "Ownership of outcomes regardless of result"
+      ],
+      weakAnswersReveal: [
+        "Analysis paralysis—waiting for perfect information",
+        "Making decisions without considering risk",
+        "Blaming uncertainty for poor outcomes",
+        "Inability to explain reasoning behind decisions"
+      ]
+    }
   },
   {
     id: 'qb-univ-beh-017',
@@ -326,7 +461,22 @@ Result: The immediate bug fix worked, but the monitoring dashboard caught two ot
       'Self-motivation (not just responding to requests)',
       'Measurable positive outcome beyond the original ask'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're assessing if you take ownership beyond your job description and proactively create value.",
+      strongAnswersDemonstrate: [
+        "Self-initiated effort beyond requirements",
+        "Strategic thinking about broader impact",
+        "Genuine initiative (not just working more hours)",
+        "Creating lasting value beyond immediate task"
+      ],
+      weakAnswersReveal: [
+        "Equating 'above and beyond' with just working overtime",
+        "Taking on extra work without strategic purpose",
+        "Waiting to be asked before taking initiative",
+        "Unable to distinguish expected work from exceptional contribution"
+      ]
+    }
   },
   {
     id: 'qb-univ-beh-018',
@@ -350,7 +500,22 @@ Result: After three months, my manager mentioned that multiple people had commen
       'Concrete actions taken to address feedback',
       'Evidence of actual behavior change'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're testing if you're coachable and can improve based on feedback rather than becoming defensive.",
+      strongAnswersDemonstrate: [
+        "Choosing genuinely critical feedback",
+        "Non-defensive initial response",
+        "Seeking to understand before responding",
+        "Concrete evidence of changed behavior"
+      ],
+      weakAnswersReveal: [
+        "Dismissing or minimizing feedback",
+        "Becoming defensive or making excuses",
+        "Superficial acceptance without real change",
+        "Inability to receive negative feedback gracefully"
+      ]
+    }
   },
 
   // More Technical Questions
@@ -429,7 +594,22 @@ Result: We restored the workflow and recovered about 30% of churned customers th
       'Navigated cross-functional boundaries',
       'Significant positive outcome'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Amazon tests whether you think like an owner and act on company problems even when 'not your job'.",
+      strongAnswersDemonstrate: [
+        "Acting beyond formal responsibilities",
+        "Company-level thinking over team-level",
+        "Navigating organizational boundaries effectively",
+        "Long-term impact over short-term credit"
+      ],
+      weakAnswersReveal: [
+        "Staying in lane even when company needs help",
+        "Waiting for permission to address problems",
+        "Focusing only on team metrics",
+        "Inability to operate cross-functionally"
+      ]
+    }
   },
   {
     id: 'qb-amazon-003',
@@ -453,7 +633,22 @@ Result: After discussion, the team agreed to stay with our current stack. A few 
       'Respectful disagreement',
       'Commitment to outcome over popularity'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Amazon wants leaders who voice dissent constructively but commit fully once decisions are made.",
+      strongAnswersDemonstrate: [
+        "Principled disagreement backed by evidence",
+        "Respectful advocacy without damaging relationships",
+        "Commitment once decision is made (even if you disagreed)",
+        "Courage to voice unpopular but correct positions"
+      ],
+      weakAnswersReveal: [
+        "Going along to get along",
+        "Continuing to undermine after decision is made",
+        "Being confrontational without substance",
+        "Inability to separate ideas from egos"
+      ]
+    }
   },
 
   // More Google Questions
@@ -479,7 +674,22 @@ Result: The rollback fixed the issue. Post-mortem showed it was indeed our code.
       'Bias to action with mitigation',
       'Learning applied forward'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Google assesses if you can balance analytical rigor with bias to action when perfect data isn't available.",
+      strongAnswersDemonstrate: [
+        "Structured approach to uncertainty",
+        "Cost-benefit analysis of different choices",
+        "Making reversible decisions quickly",
+        "Documenting reasoning for future learning"
+      ],
+      weakAnswersReveal: [
+        "Paralysis waiting for complete information",
+        "Reckless action without considering risks",
+        "Inability to make decisions without certainty",
+        "Not learning from past decisions"
+      ]
+    }
   },
   {
     id: 'qb-google-003',
@@ -503,7 +713,22 @@ Result: Reports now generate automatically overnight with zero manual interventi
       'Clear impact',
       'Pride in craftsmanship'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "Google wants to see genuine passion for building and whether you create things that matter without being asked.",
+      strongAnswersDemonstrate: [
+        "Self-initiated building (not just assigned work)",
+        "Technical depth and craftsmanship",
+        "Genuine enthusiasm for the work",
+        "Sustainable impact over time"
+      ],
+      weakAnswersReveal: [
+        "Only building when assigned",
+        "Surface-level technical work",
+        "Inability to articulate what makes work meaningful",
+        "Building for resume rather than impact"
+      ]
+    }
   },
 
   // More McKinsey Questions
@@ -529,7 +754,22 @@ Result: Within 6 months, we had 12 posts from 8 different authors. Our careers p
       'Quantifiable results',
       'Sustainable change'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "McKinsey assesses whether you create lasting change and can mobilize others toward a shared goal.",
+      strongAnswersDemonstrate: [
+        "Creating change beyond your formal role",
+        "Mobilizing others toward shared goals",
+        "Sustainable impact that outlasts your involvement",
+        "Creative approaches to systemic problems"
+      ],
+      weakAnswersReveal: [
+        "Impact only within narrow job scope",
+        "Changes that depend entirely on your continued involvement",
+        "Inability to influence without authority",
+        "Short-term wins without lasting change"
+      ]
+    }
   },
   {
     id: 'qb-mckinsey-003',
@@ -553,7 +793,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Resilience through obstacles',
       'Achievement and learning'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "McKinsey tests for entrepreneurial drive—the internal motivation to set and achieve ambitious goals.",
+      strongAnswersDemonstrate: [
+        "Self-set ambitious goals (not assigned)",
+        "Structured approach to achievement",
+        "Perseverance through setbacks",
+        "Learning and growth from the journey"
+      ],
+      weakAnswersReveal: [
+        "Goals set by others (externally motivated)",
+        "Giving up when facing obstacles",
+        "Setting easily achievable goals",
+        "Achievement without personal growth"
+      ]
+    }
   },
 
   // Situational Questions
@@ -573,7 +828,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Offer alternatives',
       'Know when to disagree and commit'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They want to see if you can challenge authority constructively without being insubordinate or passive.",
+      strongAnswersDemonstrate: [
+        "Seeking to understand before disagreeing",
+        "Constructive pushback with evidence",
+        "Proposing alternatives, not just objections",
+        "Knowing when to commit after disagreeing"
+      ],
+      weakAnswersReveal: [
+        "Immediately complying without voicing concerns",
+        "Confrontational pushback without substance",
+        "Passive-aggressive compliance",
+        "Continuing to resist after decision is final"
+      ]
+    }
   },
   {
     id: 'qb-sit-003',
@@ -591,7 +861,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Assume positive intent initially',
       'Focus on future prevention'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're testing emotional intelligence and whether you can handle workplace politics professionally.",
+      strongAnswersDemonstrate: [
+        "Emotional regulation in the moment",
+        "Addressing issues directly but privately",
+        "Assuming positive intent initially",
+        "Focusing on prevention over retaliation"
+      ],
+      weakAnswersReveal: [
+        "Publicly confronting the colleague",
+        "Passive avoidance of the issue",
+        "Immediate escalation to management",
+        "Holding grudges or seeking revenge"
+      ]
+    }
   },
   {
     id: 'qb-sit-004',
@@ -609,7 +894,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Take ownership without blame',
       'Propose mitigation plan'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're assessing if you take ownership of problems and communicate proactively rather than hiding issues.",
+      strongAnswersDemonstrate: [
+        "Early communication before deadline arrives",
+        "Bringing solutions not just problems",
+        "Taking ownership without blame-shifting",
+        "Providing clear options for stakeholders"
+      ],
+      weakAnswersReveal: [
+        "Waiting until the last minute to communicate",
+        "Hiding problems hoping they'll resolve",
+        "Blaming team or circumstances",
+        "Inability to provide mitigation options"
+      ]
+    }
   },
 
   // More Culture Fit
@@ -628,7 +928,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Give a real example',
       'Acknowledge stress is normal'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They want to know if you have self-awareness about stress and sustainable strategies to perform under pressure.",
+      strongAnswersDemonstrate: [
+        "Self-awareness about stress triggers",
+        "Concrete coping strategies",
+        "Ability to prioritize under pressure",
+        "Maintaining quality despite deadlines"
+      ],
+      weakAnswersReveal: [
+        "Claiming you never get stressed (not believable)",
+        "No concrete strategies for managing pressure",
+        "Burning out or becoming ineffective under stress",
+        "Stress causing interpersonal problems"
+      ]
+    }
   },
   {
     id: 'qb-culture-003',
@@ -645,7 +960,22 @@ Result: I passed in the top quartile. Beyond the credential, I proved to myself 
       'Connect to the specific role',
       'Show depth beyond surface motivators'
     ],
-    isPremiumAnswer: true
+    isPremiumAnswer: true,
+    intent: {
+      hiddenIntent: "They're checking if your motivations align with what the role actually offers day-to-day.",
+      strongAnswersDemonstrate: [
+        "Genuine intrinsic motivations",
+        "Connection between motivation and role",
+        "Depth beyond obvious answers (money, prestige)",
+        "Self-awareness about what energizes you"
+      ],
+      weakAnswersReveal: [
+        "Generic motivations that could apply anywhere",
+        "Motivations that don't match role reality",
+        "Only extrinsic motivators (title, compensation)",
+        "Lack of self-knowledge about drivers"
+      ]
+    }
   }
 ];
 

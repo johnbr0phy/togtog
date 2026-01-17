@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Question } from '../lib/types';
+import IntentLabel from './IntentLabel';
 
 interface QuestionCardProps {
   question: Question;
@@ -67,6 +68,13 @@ export default function QuestionCard({ question, index, showAnswer = false }: Qu
           <p className="text-sm text-gray-600 mb-4">
             {question.context}
           </p>
+        )}
+
+        {/* Intent Label */}
+        {question.intent && (
+          <div className="mb-4">
+            <IntentLabel intent={question.intent} />
+          </div>
         )}
 
         {/* Multiple Choice Options */}
