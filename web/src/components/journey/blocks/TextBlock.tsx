@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { TextContent } from '@/types/journey';
 
 interface TextBlockProps {
@@ -11,7 +12,7 @@ export default function TextBlock({ content }: TextBlockProps) {
   // Supports: **bold**, *italic*, - bullet lists, numbered lists, ## headings
   const renderMarkdown = (text: string) => {
     const lines = text.split('\n');
-    const elements: JSX.Element[] = [];
+    const elements: React.ReactElement[] = [];
     let listItems: string[] = [];
     let listType: 'ul' | 'ol' | null = null;
     let key = 0;
