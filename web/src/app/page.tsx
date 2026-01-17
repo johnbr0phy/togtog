@@ -15,6 +15,15 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Master your next tech interview with company-specific preparation guides.
           </p>
+          <Link
+            href="/my-prep"
+            className="inline-flex items-center px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors"
+          >
+            Start Your Prep Journey
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </Link>
         </div>
       </section>
 
