@@ -139,8 +139,6 @@ export default function JourneyStepClient({
             <div className="flex flex-col gap-3">
               {block.content.options.map((option) => {
                 const isSelected = selectedOption === option.id;
-                const showCorrect = quizAnswered && option.isCorrect;
-                const showWrong = quizAnswered && isSelected && !option.isCorrect;
 
                 return (
                   <button
@@ -152,19 +150,19 @@ export default function JourneyStepClient({
                         saveQuizAnswer(module.id, step.id, block.id, option.id);
                       }
                     }}
-                    className={`
-                      px-5 py-4 rounded-2xl text-base font-medium text-center transition-all
-                      ${showCorrect
-                        ? 'bg-green-50 border-2 border-green-500 text-green-700'
-                        : showWrong
-                          ? 'bg-red-50 border-2 border-red-400 text-red-700'
-                          : isSelected
-                            ? 'bg-orange-50 border-2 border-orange-500 text-orange-700'
-                            : 'bg-white border-2 border-transparent hover:shadow-md hover:-translate-y-0.5'
-                      }
-                    `}
                     style={{
-                      boxShadow: !isSelected && !quizAnswered ? '0 2px 8px rgba(0,0,0,0.04)' : undefined
+                      padding: '1rem 1.25rem',
+                      borderRadius: '1rem',
+                      fontSize: '1rem',
+                      fontWeight: 500,
+                      textAlign: 'center',
+                      transition: 'all 0.15s ease',
+                      cursor: quizAnswered ? 'default' : 'pointer',
+                      background: isSelected ? '#fff4ed' : 'white',
+                      border: isSelected ? '2px solid #e8670f' : '2px solid transparent',
+                      color: isSelected ? '#c45a0a' : '#2d2a26',
+                      boxShadow: !isSelected ? '0 2px 8px rgba(0,0,0,0.04)' : 'none',
+                      opacity: quizAnswered && !isSelected ? 0.5 : 1,
                     }}
                   >
                     {option.text}
@@ -173,7 +171,12 @@ export default function JourneyStepClient({
               })}
             </div>
             {quizAnswered && (
-              <p className="mt-5 text-sm text-center text-gray-600 animate-fadeIn">
+              <p style={{
+                marginTop: '1.25rem',
+                fontSize: '0.875rem',
+                textAlign: 'center',
+                color: '#6b6b6b',
+              }}>
                 {block.content.explanation}
               </p>
             )}
@@ -302,6 +305,7 @@ export default function JourneyStepClient({
 
         {/* Question/Title */}
         <h1
+          key={`title-${currentBlock.id}`}
           className="text-2xl md:text-3xl font-normal text-center text-gray-900 mb-8 max-w-lg leading-snug animate-fadeIn"
           style={{ fontFamily: "'Fraunces', Georgia, serif" }}
         >
@@ -312,7 +316,7 @@ export default function JourneyStepClient({
         </h1>
 
         {/* Content block */}
-        <div className="animate-fadeIn">
+        <div key={`block-${currentBlock.id}`} className="animate-fadeIn">
           {renderBlock(currentBlock)}
         </div>
       </main>
