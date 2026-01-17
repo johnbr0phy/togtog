@@ -5,3 +5,6 @@ export { PricingSection } from './PricingSection';
 export { FAQSection } from './FAQSection';
 export { default as QuestionCard } from './QuestionCard';
 export { default as QuestionsSection } from './QuestionsSection';
+
+// Stage components
+export { StageCard, StageMap, AddStageModal } from './stages';
